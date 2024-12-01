@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Web Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; }
+        form { max-width: 400px; margin: auto; }
+        input { display: block; margin-bottom: 10px; width: 100%; padding: 8px; }
+        button { padding: 10px 15px; background-color: #007BFF; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        h1, h2 { text-align: center; }
+        #result { text-align: center; color: green; font-size: 20px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Nhập dữ liệu</h1>
+    <form id="dataForm">
+        <input type="number" id="value1" placeholder="Giá trị 1" required>
+        <input type="number" id="value2" placeholder="Giá trị 2" required>
+        <input type="number" id="value3" placeholder="Giá trị 3" required>
+        <input type="number" id="value4" placeholder="Giá trị 4" required>
+        <input type="number" id="value5" placeholder="Giá trị 5" required>
+        <input type="number" id="value6" placeholder="Giá trị 6" required>
+        <button type="button" onclick="submitData()">Gửi</button>
+    </form>
+    <h2>Kết quả:</h2>
+    <p id="result"></p>
+
+    <script>
+        function submitData() {
+            const values = {
+                value1: document.getElementById('value1').value,
+                value2: document.getElementById('value2').value,
+                value3: document.getElementById('value3').value,
+                value4: document.getElementById('value4').value,
+                value5: document.getElementById('value5').value,
+                value6: document.getElementById('value6').value,
+            };
+
+            fetch('https://backend-fhuz.onrender.com/process', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(values),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result !== undefined) {
+                    document.getElementById('result').textContent = `Kết quả: ${data.result}`;
+                } else {
+                    document.getElementById('result').textContent = `Lỗi: ${data.error}`;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').textContent = `Có lỗi xảy ra!`;
+            });
+        }
+    </script>
+</body>
+</html>
