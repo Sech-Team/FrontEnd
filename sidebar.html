@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger-like Page</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #3b5998;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #f0f2f5;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        .sidebar h2 {
+            margin-top: 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Messenger</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chats</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Welcome to Messenger</h1>
+        <p>Select a chat to start messaging.</p>
+    </div>
+</body>
+</html>
