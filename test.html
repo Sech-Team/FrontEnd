@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Web Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="a.css">
+
+
+
+
+
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+        .container { margin-top: 50px; }
+        .form-group { margin-bottom: 15px; }
+        .btn-primary { background-color: #007BFF; border: none; }
+        .btn-primary:hover { background-color: #0056b3; }
+        footer { margin-top: 50px; padding: 20px 0; background-color: #56a8c3; text-align: center; }
+        .navbar { margin-bottom: 20px; background-color: #56a8c3; }
+        .navbar-brand, .nav-link { color: #fff !important; }
+        .sidebar { height: 100vh; position: fixed; top: 0; left: 0; width: 250px; background-color: #f8f9fa; padding-top: 20px; }
+        .content { margin-left: 270px; }
+        .feed { margin-top: 20px; }
+        .profile-info { padding: 20px; background-color: #a9bbb9; border: 1px solid #ddd; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">MyWebsite</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.pornhub.com/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.pornhub.com/">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.pornhub.com/">Messages</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="sidebar">
+        <div class="profile-info">
+            <h4>Thuc Phan</h4>
+            <p>Software Engineer at Sech Team</p>
+            <email>pnthuc@gmail.com</email>
+            <p>Link fb <a href="https://xnxx.com/">here</a></p>
+        </div>
+        <div class="profile-info">
+            <h4>Thien Tong</h4>
+            <p>Cyber Security at Sech Team</p>
+            <p>Link profile <a href="https://m.media-amazon.com/images/I/31RQ7zGCm4L._UX358_FMwebp_QL85_.jpg">here</a></p>
+        </div>
+        <div class="profile-info">
+            <h4>Nam Phuong</h4>
+            <p>Team Lead at Sech Team</p>
+            <p>Link fb <a href="https://en.wikipedia.org/wiki/Henry_Gerber">here</a></p>
+        </div>
+        <div class="profile-info">
+            <h4>Phuc Gia</h4>
+            <p>Dog at Sech Team</p>
+            <p>Link fb <a href="https://yt3.googleusercontent.com/aj2ENEtIndklI_8aVBJoQWKw7a5bktxAxgYBw1rDU2SDnUtGZ2XpOGQlOjK8_3yWF9SPBMNCzpE=s160-c-k-c0x00ffffff-no-rj">here</a></p>
+        </div>
+        <div class="profile-info">
+            <h4>Danh Phuong</h4>
+            <p>Cute at Sech Team</p>
+            <p>Link profile <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-1gfpTR7jvCXlIBQLcChNA2tSMNMnGr1dDA&s">here</a></p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <form id="dataForm">
+                <div class="form-group">
+                    <label for="value1">Transaction date</label>
+                    <input type="number" class="form-control" id="value1" placeholder="Transaction date" required>
+                </div>
+                <div class="form-group">
+                    <label for="value2">House age</label>
+                    <input type="number" class="form-control" id="value2" placeholder="House age" required>
+                </div>
+                <div class="form-group">
+                    <label for="value3">Distance to the nearest MRT station</label>
+                    <input type="number" class="form-control" id="value3" placeholder="Distance to the nearest MRT station" required>
+                </div>
+                <div class="form-group">
+                    <label for="value4">Number of convenience stores</label>
+                    <input type="number" class="form-control" id="value4" placeholder="Number of convenience stores" required>
+                </div>
+                <div class="form-group">
+                    <label for="value5">Latitude</label>
+                    <input type="number" class="form-control" id="value5" placeholder="Latitude" required>
+                </div>
+                <div class="form-group">
+                    <label for="value6">Longitude</label>
+                    <input type="number" class="form-control" id="value6" placeholder="Longitude" required>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="submitData()">Gửi</button>
+            </form>
+            <h2 class="text-center mt-4">Giá nhà</h2>
+            <p id="result" class="text-center text-success font-weight-bold"></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Sech Team, Inc. All rights reserved.</p>
+    </footer>
+    <script>
+        function submitData() {
+            const values = {
+                value1: document.getElementById('value1').value,
+                value2: document.getElementById('value2').value,
+                value3: document.getElementById('value3').value,
+                value4: document.getElementById('value4').value,
+                value5: document.getElementById('value5').value,
+                value6: document.getElementById('value6').value,
+            };
+            for (let key in values) {
+                if (values[key] === '') {
+                    values[key] = null;
+                }
+            }
+            document.getElementById('result').textContent = `Giá trị đã nhập: ${values.value1}, ${values.value2}, ${values.value3}, ${values.value4}, ${values.value5}, ${values.value6}`;
+            fetch('https://backend-fhuz.onrender.com/process', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(values),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result !== undefined) {
+                    document.getElementById('result').textContent = `Kết quả: ${data.result}`;
+                } else {
+                    document.getElementById('result').textContent = `Lỗi: ${data.error}`;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').textContent = `Có lỗi xảy ra!`;
+            });
+        }
+    </script>
+</body>
+</html>
