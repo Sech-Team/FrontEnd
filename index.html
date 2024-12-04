@@ -15,8 +15,8 @@
         footer { margin-top: 50px;  padding: 20px 0; background-color: #56a8c3; text-align: center; }
         .navbar { margin-bottom: 20px; background-color: #56a8c3; }
         .navbar-brand, .nav-link { color: #fff !important; }
-        .content { margin-right: 250px; padding: 20px; }
-        .sidebar { height: 100%; width: 260px   ; position: fixed; z-index: 1; top: 0; right: 0; background-color: #dad9d9; padding-top: 20px; }
+        .content { padding: 20px; }
+        .sidebar {transition: right 0.3s ease; height: 100%; width: 260px   ; position: fixed; z-index: 1; top: 0; right: -185px; background-color: #dad9d9; padding-top: 20px; } 
     </style>
 </head>
 <body>
@@ -31,9 +31,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
-    <div class="sidebar">
-        <div class="header">Company Leadership</div>
-        <div class="contact">
+    <div class="sidebar" id = "sidebar">
+        <div class="header">Members</div>
+        <div class="contact" id = "contact">
             <a href="profileThuc.html">
                 <img src="img/images.jpg" alt="Avatar">
                 <span style="color: black;">Phan Ngọc Thức</span>
@@ -64,6 +64,20 @@
             </a>
         </div>  
     </div>    
+    <script>
+        const sidebar = document.querySelector(".sidebar");
+        // Hiển thị sidebar khi chuột đưa vào
+        sidebar.addEventListener("mouseenter", () => {
+            sidebar.style.right = "0";
+            // content.classList.add("sidebar-open");
+        });
+
+        // Ẩn sidebar khi chuột rời đi
+        sidebar.addEventListener("mouseleave", () => {
+            sidebar.style.right = "-185px";
+            // content.classList.remove("sidebar-open");
+        });
+    </script>
     <div class="content">
         <div class="container">
             <form id="dataForm">
@@ -91,14 +105,14 @@
                     <label for="value6" style="color: black; font-weight: bold;">Longitude</label>
                     <input type="number" class="form-control" id="value6" placeholder="Longitude" required>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="submitData()">Gửi</button>
+                <button type="button" class="btn btn-primary" onclick="submitData()">Send</button>
             </form>
             <!-- <h2 class="text-center mt-4">Giá nhà</h2> -->
             <p id="result" class="text-center text-success font-weight-bold"></p>
         </div>
     </div>
     <footer>
-        <p style="margin-right: 250px;">&copy; 2024 Sech Team, Inc. All rights reserved.</p>
+        <p>&copy; 2024 Sech Team, Inc. All rights reserved.</p>
     </footer>
     <script>
         function submitData() {
@@ -137,11 +151,8 @@
             });
         }
     </script>
-    <div id="map" style="height: 500px; width: 100%;"></div>
-    <script src="js/ggmap.js">
-        // initMap();
-    </script> 
-<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApdnBLqJeVW4c5tlZ32v8BzVBVyJnYlg&callback=initMap"></script> -->
+    <!-- <div id="map" style="height: 500px; width: 100%;"></div>
+    <script src="js/ggmap.js"></script>  -->
 </body>
 </html>
 </li>
