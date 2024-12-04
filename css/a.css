@@ -5,14 +5,31 @@ body {
   background: linear-gradient(to bottom, #4a90e2, #1c1f26);
 }
 
-.sidebar {
-  width: 300px;
-  height: 100vh;
-  background-color: #ffffff;
-  border-right: 1px solid #ddd;
-  padding: 10px 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+nav.catalog ul{
+  transform: translateX(80px);
+  list-style: none;
+  display:flex;
+  flex-direction: row;
 }
+
+.catalog ul li{
+  justify-content: center;
+}
+
+.rootmember{
+  border: 1px solid black;
+}
+
+.nodemember li a{
+  transform: translateX(-140px);
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color:black;
+  border: 1px solid black;
+  /* opacity: 0;
+  visibility: hidden; */
+} 
 
 .header {
   font-size: 18px;
@@ -42,8 +59,20 @@ body {
 .contact span {
   flex: 1;
   font-size: 16px;
-  color: black;
-  /* // bold text; */
+}
+
+.status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status.online {
+  background-color: green;
+}
+
+.status.offline {
+  background-color: gray;
 }
 
 .contact a {
