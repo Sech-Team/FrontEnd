@@ -8,24 +8,26 @@ body {
 div.category{
   color: white;
   font-weight: 100;
-  margin-left: 38em;
+  margin-left: 10em;
+  transform: translateX(150px);
 }
 
+div.category span{
+  padding: 0px 15px;
+  border-right: #37495c solid;
+  cursor:pointer;
+}
 .member{
   border:none;
   transition: 0.5s;
 }
 
 .member:hover{
-  background-color: black;
+  color:black;
+  background-color: white;
   padding-bottom: 80px;
 }
 
-div.category span{
-  padding: 0px 10px;
-  border-right: #37495c solid;
-  cursor:pointer;
-}
 
 .testing{
   font-size: 0.5em;
