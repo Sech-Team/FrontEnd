@@ -5,13 +5,6 @@ body {
   background: linear-gradient(to bottom, #4a90e2, #1c1f26);
 }
 
-<<<<<<< HEAD
-nav.catalog ul{
-  transform: translateX(80px);
-  list-style: none;
-  display:flex;
-  flex-direction: row;
-=======
 .sidebar {
   width: 300px;
   height: 100vh;
@@ -20,33 +13,6 @@ nav.catalog ul{
   padding: 10px 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-div.category{
-  color: white;
-  font-weight: 100;
-  margin-left: 10em;
-  transform: translateX(150px);
->>>>>>> 7df44427fd5006a82bbbb2c97b266d7b5f37fba9
-}
-
-.catalog ul li{
-  justify-content: center;
-}
-
-.rootmember{
-  border: 1px solid black;
-}
-
-.nodemember li a{
-  transform: translateX(-140px);
-  display:flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  color:black;
-  border: 1px solid black;
-  /* opacity: 0;
-  visibility: hidden; */
-} 
 
 .header {
   font-size: 18px;
