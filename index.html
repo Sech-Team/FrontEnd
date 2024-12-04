@@ -16,7 +16,7 @@
         .navbar { margin-bottom: 20px; background-color: linear-gradient(to bottom, #4a90e2, #1c1f26); }
         .navbar-brand, .nav-link { color: #fff !important; }
         .content { padding: 20px; }
-        .sidebar {transition: left 0.3s ease; height: 100%; width: 260px   ; position: fixed; z-index: 1; top: 0; left: -225px; background-color: #dad9d9; padding-top: 20px; } 
+        .sidebar {transition: right 0.3s ease; height: 100%; width: 260px   ; position: fixed; z-index: 1; top: 0; right: -185px; background-color: #ffffff; padding-top: 20px; } 
     </style>
 </head>
 <body>
@@ -61,42 +61,42 @@
         <div class="contact" id = "contact">
             <a href="profileThuc.html">
                 <img src="img/images.jpg" alt="Avatar">
-                <span style="color: black;">Phan Ngọc Thức</span>
+                <span>Phan Ngọc Thức</span>
             </a>
         </div>
         <div class="contact">
             <a href="profileThien.html">
                 <img src="img/ab67616d0000b273ddff87d44e3d726372ef7f56.jpg" alt="Avatar">
-                <span style="color: black;">Tống Phúc Thiện</span>
+                <span>Tống Phúc Thiện</span>
             </a>
         </div>
         <div class="contact">
             <a href="profileNam.html">
                 <img src="img/Gay_Pride_Flag.svg.png" alt="Avatar">
-                <span style="color: black;">Bùi Phương Nam</span>
-                <center><span style="color: black;">(Leader)</span></center>
+                <span>Bùi Phương Nam</span>
+                <center><span>(Leader)</span></center>
             </a>
         </div>
         <div class="contact">
             <a href="profilePhuc.html">
                 <img src="img/images (1).jpg" alt="Avatar">
-                <span style="color: black;">Phan Gia Phúc</span>
+                <span>Phan Gia Phúc</span>
             </a>
         </div>
         <div class="contact">
             <a href="profilePhuong.html">
                 <img src="img/math-header.jpg" alt="Avatar">
-                <span style="color: black;">Nguyễn Danh Phương</span>
+                <span>Nguyễn Danh Phương</span>
             </a>
         </div>  
     </div>    
     <script>
         const sidebar = document.querySelector(".sidebar");
         sidebar.addEventListener("mouseenter", () => {
-            sidebar.style.left = "0";
+            sidebar.style.right = "0";
         });
         sidebar.addEventListener("mouseleave", () => {
-            sidebar.style.left = "-225px";
+            sidebar.style.right = "-185px";
         });
     </script>
     <div class="content">
