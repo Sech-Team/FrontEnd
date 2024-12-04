@@ -44,4 +44,12 @@ body {
       opacity: 0;
     }
   }
-  
+  .profile-container {
+    background-color: #fff;
+    border: 60px solid transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-image: linear-gradient(#CC95C0, #DBD4B4, #7AA1D2) 1 fill;
+}
