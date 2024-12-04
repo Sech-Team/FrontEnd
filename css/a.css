@@ -5,6 +5,15 @@ body {
   background: linear-gradient(to bottom, #4a90e2, #1c1f26);
 }
 
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 div.category{
   color: white;
   font-weight: 100;
@@ -62,20 +71,8 @@ div.category span{
 .contact span {
   flex: 1;
   font-size: 16px;
-}
-
-.status {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.status.online {
-  background-color: green;
-}
-
-.status.offline {
-  background-color: gray;
+  color: black;
+  /* // bold text; */
 }
 
 .contact a {
