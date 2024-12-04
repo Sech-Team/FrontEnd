@@ -5,16 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dự đoán giá nhà</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<<<<<<< HEAD
     <link rel="stylesheet" href="a.css">
+=======
+    <link rel="stylesheet" href="css/a.css">
+    <!-- <link rel="stylesheet" href="style.css">     -->
+>>>>>>> 8f830e8ac1a8d39efb6e751e3d8b649546d1405e
     <style>
         footer { margin-top: 50px;  padding: 20px 0; background-color: #56a8c3; text-align: center; }
         .navbar { margin-bottom: 20px; background-color: #56a8c3;}
         .navbar-brand, .nav-link { color: #fff !important; }
+<<<<<<< HEAD
+=======
+        .content { padding: 20px; }
+        .sidebar {transition: right 0.3s ease; height: 100%; width: 260px   ; position: fixed; z-index: 1; top: 0; right: -185px; background-color: #dad9d9; padding-top: 20px; } 
+>>>>>>> 8f830e8ac1a8d39efb6e751e3d8b649546d1405e
     </style>
 </head>
 <body>
+    <script type="text/javascript">
+        console.log("Welcome to our website!");
+    </script>
     <div class="rain"></div>
-    <script src="script2.js"></script>
+    <script src="js/rain.js"></script>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="index.html">Product of Sech Team</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,6 +39,51 @@
             <span class="testing">"TÍNH NĂNG SẼ ĐƯỢC THÊM VÀO SAU"</span>
         </div>
     </nav>
+<<<<<<< HEAD
+=======
+    <div class="sidebar" id = "sidebar">
+        <div class="header">Members</div>
+        <div class="contact" id = "contact">
+            <a href="profileThuc.html">
+                <img src="img/images.jpg" alt="Avatar">
+                <span style="color: black;">Phan Ngọc Thức</span>
+            </a>
+        </div>
+        <div class="contact">
+            <a href="profileThien.html">
+                <img src="img/ab67616d0000b273ddff87d44e3d726372ef7f56.jpg" alt="Avatar">
+                <span style="color: black;">Tống Phúc Thiện</span>
+            </a>
+        </div>
+        <div class="contact">
+            <a href="profileNam.html">
+                <img src="img/Gay_Pride_Flag.svg.png" alt="Avatar">
+                <span style="color: black;">Bùi Phương Nam</span>
+            </a>
+        </div>
+        <div class="contact">
+            <a href="profilePhuc.html">
+                <img src="img/images (1).jpg" alt="Avatar">
+                <span style="color: black;">Phan Gia Phúc</span>
+            </a>
+        </div>
+        <div class="contact">
+            <a href="profilePhuong.html">
+                <img src="img/math-header.jpg" alt="Avatar">
+                <span style="color: black;">Nguyễn Danh Phương</span>
+            </a>
+        </div>  
+    </div>    
+    <script>
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.addEventListener("mouseenter", () => {
+            sidebar.style.right = "0";
+        });
+        sidebar.addEventListener("mouseleave", () => {
+            sidebar.style.right = "-185px";
+        });
+    </script>
+>>>>>>> 8f830e8ac1a8d39efb6e751e3d8b649546d1405e
     <div class="content">
         <div class="container">
             <form id="dataForm">
@@ -53,14 +111,14 @@
                     <label for="value6">Longitude</label>
                     <input type="number" class="form-control" id="value6" placeholder="Longitude" required>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="submitData()">Gửi</button>
+                <button type="button" class="btn btn-primary" onclick="submitData()">Send</button>
             </form>
             <!-- <h2 class="text-center mt-4">Giá nhà</h2> -->
             <p id="result" class="text-center text-success font-weight-bold"></p>
         </div>
     </div>
     <footer>
-        <p style="margin-right: 250px;">&copy; 2024 Sech Team, Inc. All rights reserved.</p>
+        <p>&copy; 2024 Sech Team, Inc. All rights reserved.</p>
     </footer>
     <script>
         function submitData() {
@@ -99,6 +157,8 @@
             });
         }
     </script>
+    <!-- <div id="map" style="height: 500px; width: 100%;"></div>
+    <script src="js/ggmap.js"></script>  -->
 </body>
 </html>
 </li>
