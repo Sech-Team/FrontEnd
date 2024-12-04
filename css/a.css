@@ -5,34 +5,31 @@ body {
   background: linear-gradient(to bottom, #4a90e2, #1c1f26);
 }
 
-div.category{
-  color: white;
-  font-weight: 100;
-  margin-left: 10em;
-  transform: translateX(150px);
+nav.catalog ul{
+  transform: translateX(80px);
+  list-style: none;
+  display:flex;
+  flex-direction: row;
 }
 
-div.category span{
-  padding: 0px 15px;
-  border-right: #37495c solid;
-  cursor:pointer;
-}
-.member{
-  border:none;
-  transition: 0.5s;
+.catalog ul li{
+  justify-content: center;
 }
 
-.member:hover{
+.rootmember{
+  border: 1px solid black;
+}
+
+.nodemember li a{
+  transform: translateX(-140px);
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
   color:black;
-  background-color: white;
-  padding-bottom: 80px;
-}
-
-
-.testing{
-  font-size: 0.5em;
-}
-
+  border: 1px solid black;
+  /* opacity: 0;
+  visibility: hidden; */
+} 
 
 .header {
   font-size: 18px;
