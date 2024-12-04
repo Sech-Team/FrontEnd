@@ -5,14 +5,32 @@ body {
   background: linear-gradient(to bottom, #4a90e2, #1c1f26);
 }
 
-.sidebar {
-  width: 300px;
-  height: 100vh;
-  background-color: #ffffff;
-  border-right: 1px solid #ddd;
-  padding: 10px 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+div.category{
+  color: white;
+  font-weight: 100;
+  margin-left: 38em;
 }
+
+.member{
+  transition: 0.5s;
+}
+
+.member:hover{
+  border:none;
+  background-color: black;
+  padding-bottom: 80px;
+}
+
+div.category span{
+  padding: 0px 10px;
+  border-right: #37495c solid;
+  cursor:pointer;
+}
+
+.testing{
+  font-size: 0.5em;
+}
+
 
 .header {
   font-size: 18px;
@@ -101,14 +119,4 @@ h1 {
     transform: translateY(110vh);
     opacity: 0.2;
   }
-}
-
-.profile-container{
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  border: 30px solid transparent;
-  border-image: linear-gradient(45deg, #74ebd5, #ACB6E5) 1 fill;
 }
