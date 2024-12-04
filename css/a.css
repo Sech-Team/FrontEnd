@@ -12,11 +12,11 @@ div.category{
 }
 
 .member{
+  border:none;
   transition: 0.5s;
 }
 
 .member:hover{
-  border:none;
   background-color: black;
   padding-bottom: 80px;
 }
