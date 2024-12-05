@@ -78,9 +78,12 @@ body {
 }
 .profile-container p {
   color: #000000;
-}
+} 
+
+
 
 #comment{
+  display: block;
   width: 60em;
   height: 30em;
   resize: none;
