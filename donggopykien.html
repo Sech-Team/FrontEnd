@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đóng góp ý kiến</title>
+    <title>Contribute comments</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Welcome to Donggopykien</h1>
-    <p>This is a sample HTML file.</p>
+    <div class="snow"></div>
+    <script src="js/snow.js"></script>
+    <form action="#">
+        <textarea placeholder="Đóng góp ý kiến tại đây" id="comment"></textarea>
+        <label for="selection" class="box">Chọn nội dung đóng góp ý kiến</label>
+        <select id="selection" class="box">
+            <option value=""></option>
+            <option value="price">Giá nhà</option>
+            <option value="UI">Giao diện</option>
+            <option value="UX">Trải nghiệm người dùng</option>
+            <option value="feature">Tính năng</option>
+        </select>
+        <button>Submit</button>
+    </form>
 </body>
 </html>
