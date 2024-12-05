@@ -194,6 +194,11 @@ button {
   width: 350px;
 }
 
+.form-content {
+  color: rgb(43, 74, 94);
+  font-weight: bolder;
+}
+
 #map {
   margin-left: 440px;
   transform: translateY(-550px);
