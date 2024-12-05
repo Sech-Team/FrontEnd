@@ -181,6 +181,7 @@ h1 {
 }
 
 .comment{
+  position: absolute;
   width: 500px;
   transform: translateX(610px) translateY(-30px);
   justify-content: flex-end;
@@ -208,12 +209,15 @@ button {
 
 #map {
   margin-left: 37em;
-  transform: translateY(-45em);
+  transform: translateY(-40em);
   height: 30em; 
   width: 62vw;
+  /* position: ; */
 }
 
-
+#result {
+  position: absolute;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
