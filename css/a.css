@@ -208,3 +208,7 @@ button{
       box-shadow: none;
   }
 }
+
+#map{
+  transform: translateY(-30px);
+}
