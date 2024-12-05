@@ -84,6 +84,7 @@ body {
   width: 60em;
   height: 30em;
   resize: none;
+  border: 1px solid red;
 }
 
 a img{

@@ -169,7 +169,8 @@ h1 {
 }
 
 .comment{
-  transform: translateY(-30px);
+  width: 500px;
+  transform: translateX(610px) translateY(-30px);
   justify-content: flex-end;
   display: none;
 }
