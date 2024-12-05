@@ -130,9 +130,13 @@ h1 {
 }
 
 .navbar ul li a:hover {
-  background-color: #0055cc;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-decoration-color: #e0e0e0;
+  /* background-color: #0055cc;
   border-radius: 5px;
-  color: #e0e0e0;
+  color: #e0e0e0; */
 }
 
 .navbar a{
