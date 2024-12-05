@@ -172,6 +172,17 @@ h1 {
   transform: translateY(0);
 }
 
+@media (max-width: 768px) {
+  .dropdown-menu {
+    width: 100%;
+    position: relative;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+  }
+}
+
 .comment{
   width: 500px;
   transform: translateX(24em) ;

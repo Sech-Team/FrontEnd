@@ -6,6 +6,7 @@ navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
 })
 
 function successLocation(position) {
+  // setupMap([121.5654, 25.0330]) 
   setupMap([position.coords.longitude, position.coords.latitude])
 }
 
@@ -65,10 +66,19 @@ function setupMap(center) {
         nearestStation = station;
       }
     });
+    const currentTime = new Date();
+    
+    const year = currentTime.getFullYear();
+    const yearSeconds = 31536000;
+    const startOfYear = new Date(year, 0, 1);
+    const nowSeconds = Math.floor((currentTime - startOfYear) / 1000);
+    const ratio = nowSeconds / yearSeconds;
+    const time = year + ratio;
+    document.getElementById('value1').value = time.toFixed(3);
     document.getElementById('value3').value = minDistance.toFixed(2);
     console.log(`Nearest MRT Station: ${nearestStation.name}, Distance: ${minDistance.toFixed(2)} km`);
     console.log(`Longitude: ${longitude}, Latitude: ${latitude}`);
-
+    
     marker.remove();
     marker.setLngLat([longitude, latitude]).addTo(map);
   });
