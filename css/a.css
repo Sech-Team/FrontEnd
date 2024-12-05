@@ -1,7 +1,6 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  /* background-color: #259050; */
   background: linear-gradient(to bottom, #4a90e2, #1c1f26);
 }
 
@@ -23,16 +22,19 @@ nav.catalog ul{
   transform: translateX(80px);
   list-style: none;
   display:flex;
-  flex-direction: row;
+  align-items: center;
+  transform: translateX(850px) translateY(-60px);
 }
 
 .catalog ul li{
-  justify-content: center;
+  margin-right: 30px;
+  position: relative;
 }
 
-.nodemember li a{
-  transform: translateX(-140px);
-  display:flex;
+.node{
+  width: 400px;
+  list-style: none;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   color:black;
