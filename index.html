@@ -10,7 +10,8 @@
         .btn-primary { background-color: #007BFF; border: none; }
         .btn-primary:hover { background-color: #0056b3; }
         footer { margin-top: 40px;  padding: 20px 0; background-color: linear-gradient(to bottom, #4a90e2, #1c1f26); text-align: center; }
-        .content { padding: 0px; }
+        .content { padding: 0px; }  
+        
     </style>
 </head>
 <body>
@@ -43,17 +44,11 @@
                 </ul>
             </li>
             <li><a href="donggopykien.html"><strong>Đóng góp ý kiến</strong></a></li>
+            <span>
+                <a href="javascript:void(0)" class="menu-icon" onclick="openSidebar()">&#9776;</a>
+            </span>
         </ul>
     </nav>
-    <script>
-        const sidebar = document.querySelector(".sidebar");
-        sidebar.addEventListener("mouseenter", () => {
-            sidebar.style.right = "0";
-        });
-        sidebar.addEventListener("mouseleave", () => {
-            sidebar.style.right = "-185px";
-        });
-    </script>
     <div class="content">
         <div class="container">
             <form id="dataForm">
@@ -81,8 +76,8 @@
                     <label for="value6" class="form-content">Longitude</label>
                     <input type="number" class="form-control" id="value6" placeholder="Longitude" required>
                 </div>
-                <button type="button" onclick="submitData(); appearData()">Send</button>
-                <p class="comment">Giá không đúng như dự đoán? Đóng góp cho chúng tôi tại <a href="donggopykien.html">đây</a></p>
+                <button type="button" onclick="submitData()">Send</button>
+                <p class="comment">Giá không đúng như dự đoán? Đóng góp cho chúng tôi tại <a href="donggopykien.html"> đây</a></p>
             </form>
             <p id="result" class="text-center text-success font-weight-bold"></p>
         </div>
@@ -91,10 +86,9 @@
         <p style="color: white;">&copy; 2024 Sech Team, Inc. All rights reserved.</p>
     </footer>
     <script>
-        function appearData(){
-            document.querySelector('.comment').style.display = 'flex';
-        }
         function submitData() {
+            document.querySelector('.comment').style.display = 'flex';
+
             const values = {
                 value1: document.getElementById('value1').value,
                 value2: document.getElementById('value2').value,

@@ -4,7 +4,7 @@ body {
   background: linear-gradient(to right,#ff6e7f, #bfe9ff);
 }
 
-.sidebar {
+/* .sidebar {
   height: 100%; width: 260px;
   position: fixed;
   background-color: #ffffff;
@@ -14,7 +14,7 @@ body {
   z-index: 1; top: 0; right: -185px;
   padding-top: 20px;
   transition: right 0.3s ease;
-} 
+}  */
 
 .header {
   font-size: 18px;
@@ -95,12 +95,12 @@ h1 {
 }
 
 .logo {  
-  border-radius: 20%;
-  height: 50px; 
+  border-radius: 25%;
+  height: 60px; 
   width: auto;
 }
 .navbar { 
-  margin-bottom: 20px; 
+  margin-bottom: 70px; 
   background-color: rgb(151, 151, 231); 
   display: flex; 
   align-items: center;
@@ -112,6 +112,7 @@ h1 {
   display: flex;
   justify-content: flex-start; 
   align-items: center;
+  margin-top: 10px
 }
 
 .navbar ul li {
