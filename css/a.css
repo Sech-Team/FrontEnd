@@ -8,7 +8,7 @@ body {
   list-style: none;
   display:flex;
   align-items: center;
-  transform: translateX(700px) translateY(-60px);
+  transform: translateX(850px) translateY(-60px);
 }
 
 .catalog ul li{
@@ -41,7 +41,7 @@ body {
   visibility: visible;
 }
 
-.node li a{
+.node li a, .member .root a{
   color: white;
 }
 
@@ -141,4 +141,9 @@ h1 {
 .form-content{
   color: white; 
   font-weight: bold;
+}
+
+#dataForm p{
+  transform: translateX(660px) translateY(-30px);
+  color:white;
 }
