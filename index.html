@@ -5,16 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dự đoán giá nhà</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/a.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="style.css">     -->
+    <link rel="stylesheet" href="css/a.css">
     <style>
         .btn-primary { background-color: #007BFF; border: none; }
         .btn-primary:hover { background-color: #0056b3; }
         footer { margin-top: 40px;  padding: 20px 0; background-color: linear-gradient(to bottom, #4a90e2, #1c1f26); text-align: center; }
-        .navbar { margin-bottom: 20px; background-color: linear-gradient(to bottom, #4a90e2, #1c1f26); }
-        .navbar-brand, .nav-link { color: #fff !important; }
-        .content { padding: 20px; }
-        .sidebar {transition: right 0.3s ease; height: 100%; width: 260px   ; position: fixed; z-index: 1; top: 0; right: -185px; background-color: #ffffff; padding-top: 20px; } 
+        .content { padding: 0px; }
     </style>
 </head>
 <body>
@@ -23,39 +19,35 @@
     </script>
     <div class="rain"></div>
     <script src="js/rain.js"></script>
-    <nav class="navbar navbar-expand-lg navbar-dark" display="inline-block">
-        <a class="navbar-brand" href="index.html">Product of Sech Team</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>  
-    <nav class="catalog">
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="img/images.png" alt="HCMUS Logo" class="logo">
+        </div>
         <ul>
-            <li class="member">
-                <p class="root">Thành viên</p>
-                <ul class="node">
-                        <li><a href="profileThuc.html">Phan Ngọc Thức</a> </li>
-                        <li><a href="profileThien.html">Tống Phúc Thiện</a> </li>
-                        <li><a href="profileNam.html">Bùi Phương Nam</a> </li>
-                        <li><a href="profilePhuc.html">Phan Gia Phúc</a> </li>
-                        <li><a href="profilePhuong.html">Nguyễn Danh Phương</a> </li>
+            <li class="dropdown">
+                <a href="#"><strong>Thành viên</strong></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Ngọc Thức</a></li>
+                    <li><a href="#">Phúc Thiện</a></li>
+                    <li><a href="#">Danh Phương</a></li>
+                    <li><a href="#">Phương Nam</a></li>
+                    <li><a href="#">Gia Phúc</a></li>
                 </ul>
             </li>
-            <li class="member">
-                <p  class="root">Tin tức</p>
-                <ul class="node">
-                    <li><a href="https://tuoitre.vn/nha-dat.htm">Tuổi trẻ </a></li>
-                    <li><a href="https://thanhnien.vn/gia-nha-dat-tags527457.html">Thanh niên</a></li>
-                    <li><a href="https://vnexpress.net/bat-dong-san">Vnexpress</a></li>
-                </ul>
-            </li>
-            <li class="member">
-                <p class="root">
-                    <a href="donggopykien.html">Đóng góp ý kiến</a>
-                </p>
-            </li>
+            <li><a href="#"><strong>Tuyển sinh</strong></a></li>
+            <li><a href="#"><strong>Đào tạo</strong></a></li>
+            <li><a href="#"><strong>Nghiên cứu</strong></a></li>
         </ul>
     </nav>
+    <script>
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.addEventListener("mouseenter", () => {
+            sidebar.style.right = "0";
+        });
+        sidebar.addEventListener("mouseleave", () => {
+            sidebar.style.right = "-185px";
+        });
+    </script>
     <div class="content">
         <div class="container">
             <form id="dataForm">
