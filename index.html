@@ -21,22 +21,28 @@
     <script src="js/rain.js"></script>
     <nav class="navbar">
         <div class="logo-container">
-            <img src="img/images.png" alt="HCMUS Logo" class="logo">
+            <a href="index.html"><img src="img/images.png" alt="HCMUS Logo" class="logo"></a>
         </div>
         <ul>
             <li class="dropdown">
                 <a href="#"><strong>Thành viên</strong></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Ngọc Thức</a></li>
-                    <li><a href="#">Phúc Thiện</a></li>
-                    <li><a href="#">Danh Phương</a></li>
-                    <li><a href="#">Phương Nam</a></li>
-                    <li><a href="#">Gia Phúc</a></li>
+                    <li><a href="profileThuc.html">Phan Ngọc Thức</a></li>
+                    <li><a href="profileThien.html">Tống Phúc Thiện</a></li>
+                    <li><a href="profilePhuong.html">Nguyễn Danh Phương</a></li>
+                    <li><a href="profileNam.html">Bùi Phương Nam</a></li>
+                    <li><a href="profilePhuc.html">Phan Gia Phúc</a></li>
                 </ul>
             </li>
-            <li><a href="#"><strong>Tuyển sinh</strong></a></li>
-            <li><a href="#"><strong>Đào tạo</strong></a></li>
-            <li><a href="#"><strong>Nghiên cứu</strong></a></li>
+            <li class="dropdown">
+                <a href="#"><strong>Tin tức</strong></a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://tuoitre.vn/nha-dat.htm">Tuổi trẻ</a></li>
+                    <li><a href="https://thanhnien.vn/gia-nha-dat-tags527457.html">Thanh niên</a></li>
+                    <li><a href="https://vnexpress.net/bat-dong-san">Vnexpress</a></li>
+                </ul>
+            </li>
+            <li><a href="donggopykien.html"><strong>Đóng góp ý kiến</strong></a></li>
         </ul>
     </nav>
     <script>
@@ -75,8 +81,8 @@
                     <label for="value6" class="form-content">Longitude</label>
                     <input type="number" class="form-control" id="value6" placeholder="Longitude" required>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="submitData()">Send</button>
-                <p>Giá không đúng như dự đoán? Đóng góp cho chúng tôi tại <a href="donggopykien.html">đây</a></p>
+                <button type="button" onclick="submitData(); appearData()">Send</button>
+                <p class="comment">Giá không đúng như dự đoán? Đóng góp cho chúng tôi tại <a href="donggopykien.html">đây</a></p>
             </form>
             <p id="result" class="text-center text-success font-weight-bold"></p>
         </div>
@@ -85,6 +91,9 @@
         <p style="color: white;">&copy; 2024 Sech Team, Inc. All rights reserved.</p>
     </footer>
     <script>
+        function appearData(){
+            document.querySelector('.comment').style.display = 'flex';
+        }
         function submitData() {
             const values = {
                 value1: document.getElementById('value1').value,
