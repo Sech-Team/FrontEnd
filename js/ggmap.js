@@ -1,25 +1,32 @@
-// Initialize and add the map
-function initMap() {
-    const map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: -34.397, lng: 150.644 }, 
-      zoom: 8,
-    });
-  
-    // Add a click event listener to the map
-    map.addListener("click", (event) => {
-      const lat = event.latLng.lat();
-      const lng = event.latLng.lng();
-      console.log("Coordinates: ", lat, lng);
-    });
+mapboxgl.accessToken =
+  "pk.eyJ1IjoicG50aHVjIiwiYSI6ImNtNDl5czhnbTAwNmgyaW9qZXlnMmI4dmQifQ.te2_WEQBWKIxbY_T-jC0oA"
+
+navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
+  enableHighAccuracy: true
+})
+
+function successLocation(position) {
+  setupMap([position.coords.longitude, position.coords.latitude])
 }
-  
-  // Load the Google Maps script
-function loadGoogleMapsScript() {
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyApdnBLqJeVW4c5tlZ32v8BzVBVyJnYlg&callback=initMap`;
-    script.async = true;
-    document.head.appendChild(script);
+
+function errorLocation() {
+  setupMap([-2.24, 53.48])  
 }
-  
-  // Call the function to load the Google Maps script
-loadGoogleMapsScript();
+
+function setupMap(center) {
+  const map = new mapboxgl.Map({
+    container: "map",
+    style: "mapbox://styles/mapbox/streets-v11",
+    center: center,
+    zoom: 15
+  })
+
+  const nav = new mapboxgl.NavigationControl()
+  map.addControl(nav)
+
+  var directions = new MapboxDirections({
+    accessToken: mapboxgl.accessToken
+  })
+
+  map.addControl(directions, "top-left")
+}

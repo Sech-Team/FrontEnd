@@ -6,13 +6,24 @@
     <title>Dự đoán giá nhà</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/a.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+      type="text/css"
+    />
     <style>
+        body {margin: 0;}
+        #map {margin-left:10vw; height:  100vh; width: 80vw;}
         .btn-primary { background-color: #007BFF; border: none; }
         .btn-primary:hover { background-color: #0056b3; }
         footer { margin-top: 40px;  padding: 20px 0; background-color: linear-gradient(to bottom, #4a90e2, #1c1f26); text-align: center; }
         .content { padding: 0px; }  
-        
     </style>
+    <script src = "js/ggmap.js" defer></script>
 </head>
 <body>
     <script type="text/javascript">
@@ -83,6 +94,7 @@
             <p id="result" class="text-center text-success font-weight-bold"></p>
         </div>
     </div>
+    <div id='map'></div>
     <footer>
         <p style="color: white;">&copy; 2024 Sech Team, Inc. All rights reserved.</p>
     </footer>
@@ -125,8 +137,6 @@
             });
         }
     </script>
-    <!-- <div id="map" style="height: 500px; width: 100%;"></div>
-    <script src="js/ggmap.js"></script>  -->
 </body>
 </html>
 </li>
