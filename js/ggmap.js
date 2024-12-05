@@ -10,7 +10,7 @@ function successLocation(position) {
 }
 
 function errorLocation() {
-  setupMap([-2.24, 53.48])  
+  setupMap([121.5654, 25.0330])  
 }
 
 function setupMap(center) {
@@ -21,20 +21,6 @@ function setupMap(center) {
     zoom: 15
   })
 
-  // const nav = new mapboxgl.NavigationControl()
-  // map.addControl(nav)
-
-  // var directions = new MapboxDirections({
-  //   accessToken: mapboxgl.accessToken
-  // })
-
-  // map.addControl(directions, "top-left")
-
-  // map.on('click', function (e) {
-  //   const longitude = e.lngLat.lng;
-  //   const latitude = e.lngLat.lat;
-  //   console.log(`Longitude: ${longitude}, Latitude: ${latitude}`);
-  // });
   const marker = new mapboxgl.Marker()
     .setLngLat(center)
     .addTo(map);
@@ -42,11 +28,46 @@ function setupMap(center) {
   map.on('click', function (e) {
     const longitude = e.lngLat.lng;
     const latitude = e.lngLat.lat;
-    console.log(`Longitude: ${longitude}, Latitude: ${latitude}`);
+    document.getElementById('value5').value = longitude.toFixed(5);
+    document.getElementById('value6').value = latitude.toFixed(5);
+    const mrtStations = [
+      { name: "Taipei Main Station", coordinates: [121.515, 25.0478] },
+      { name: "Banqiao Station", coordinates: [121.4637, 25.0143] },
+      { name: "Ximen Station", coordinates: [121.5104, 25.0422] },
+      { name: "Zhongxiao Fuxing Station", coordinates: [121.5439, 25.0418] },
+      { name: "Taipei 101/World Trade Center Station", coordinates: [121.5637, 25.0336] },
+      { name: "Shilin Station", coordinates: [121.5242, 25.0925] },
+      { name: "Beitou Station", coordinates: [121.4988, 25.1322] },
+      { name: "Tamsui Station", coordinates: [121.4631, 25.1676] },
+      { name: "Songshan Station", coordinates: [121.5788, 25.0505] },
+      { name: "Nangang Station", coordinates: [121.6075, 25.0522] }
+    ];
 
-    // new mapboxgl.Marker()
-    // .setLngLat([longitude, latitude])
-    // .addTo(map);
+    function calculateDistance(coord1, coord2) {
+      const R = 6371; 
+      const dLat = (coord2[1] - coord1[1]) * Math.PI / 180;
+      const dLon = (coord2[0] - coord1[0]) * Math.PI / 180;
+      const a = 
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(coord1[1] * Math.PI / 180) * Math.cos(coord2[1] * Math.PI / 180) * 
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      return R * c; 
+    }
+
+    let nearestStation = null;
+    let minDistance = Infinity;
+
+    mrtStations.forEach(station => {
+      const distance = calculateDistance([longitude, latitude], station.coordinates);
+      if (distance < minDistance) {
+        minDistance = distance;
+        nearestStation = station;
+      }
+    });
+    document.getElementById('value3').value = minDistance.toFixed(2);
+    console.log(`Nearest MRT Station: ${nearestStation.name}, Distance: ${minDistance.toFixed(2)} km`);
+    console.log(`Longitude: ${longitude}, Latitude: ${latitude}`);
 
     marker.remove();
     marker.setLngLat([longitude, latitude]).addTo(map);

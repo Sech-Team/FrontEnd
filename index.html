@@ -17,6 +17,7 @@
     />
     <style>
         body {margin: 0;}
+        #map {margin: 0 auto; height: 40em; width: 80em;}
         .btn-primary { background-color: #007BFF; border: none; }
         .btn-primary:hover { background-color: #0056b3; }
         footer { margin-top: 40px;  padding: 20px 0; background-color: linear-gradient(to bottom, #4a90e2, #1c1f26); text-align: center; }
@@ -49,9 +50,9 @@
             <li class="dropdown">
                 <a href="#"><strong>Tin tức</strong></a>
                 <ul class="dropdown-menu">
-                    <li><a href="https://tuoitre.vn/nha-dat.htm">Tuổi trẻ</a></li>
-                    <li><a href="https://thanhnien.vn/gia-nha-dat-tags527457.html">Thanh niên</a></li>
-                    <li><a href="https://vnexpress.net/bat-dong-san">Vnexpress</a></li>
+                    <li><a href="https://tuoitre.vn/nha-dat.htm" target="_blank">Tuổi trẻ</a></li>
+                    <li><a href="https://thanhnien.vn/gia-nha-dat-tags527457.html" target="_blank">Thanh niên</a></li>
+                    <li><a href="https://vnexpress.net/bat-dong-san" target="_blank">Vnexpress</a></li>
                 </ul>
             </li>
             <li><a href="donggopykien.html"><strong>Đóng góp ý kiến</strong></a></li>
@@ -60,6 +61,7 @@
             </span>
         </ul>
     </nav>
+    <div id='map'></div>
     <div class="content">
         <div class="container">
             <form id="dataForm">
@@ -93,7 +95,6 @@
             <p id="result" class="text-center text-success font-weight-bold"></p>
         </div>
     </div>
-    <div id='map'></div>
     <footer>
         <p style="color: white;">&copy; 2024 Sech Team, Inc. All rights reserved.</p>
     </footer>
