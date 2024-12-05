@@ -78,3 +78,9 @@ body {
 .profile-container p {
   color: #000000;
 }
+
+#comment{
+  width: 60em;
+  height: 30em;
+  resize: none;
+}
