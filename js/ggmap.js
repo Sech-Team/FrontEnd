@@ -21,12 +21,34 @@ function setupMap(center) {
     zoom: 15
   })
 
-  const nav = new mapboxgl.NavigationControl()
-  map.addControl(nav)
+  // const nav = new mapboxgl.NavigationControl()
+  // map.addControl(nav)
 
-  var directions = new MapboxDirections({
-    accessToken: mapboxgl.accessToken
-  })
+  // var directions = new MapboxDirections({
+  //   accessToken: mapboxgl.accessToken
+  // })
 
-  map.addControl(directions, "top-left")
+  // map.addControl(directions, "top-left")
+
+  // map.on('click', function (e) {
+  //   const longitude = e.lngLat.lng;
+  //   const latitude = e.lngLat.lat;
+  //   console.log(`Longitude: ${longitude}, Latitude: ${latitude}`);
+  // });
+  const marker = new mapboxgl.Marker()
+    .setLngLat(center)
+    .addTo(map);
+
+  map.on('click', function (e) {
+    const longitude = e.lngLat.lng;
+    const latitude = e.lngLat.lat;
+    console.log(`Longitude: ${longitude}, Latitude: ${latitude}`);
+
+    // new mapboxgl.Marker()
+    // .setLngLat([longitude, latitude])
+    // .addTo(map);
+
+    marker.remove();
+    marker.setLngLat([longitude, latitude]).addTo(map);
+  });
 }
