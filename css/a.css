@@ -183,6 +183,17 @@ h1 {
   }
 }
 
+/* Hide dropdown menu on mobile by default */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+}
+
 .comment{
   width: 500px;
   transform: translateX(24em) ;
