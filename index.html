@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dự đoán giá nhà</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/a.css">
+    <link href="css/a.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="style.css">     -->
     <style>
-        .container { margin-top: 50px; }
-        .form-group { margin-bottom: 15px; }
         .btn-primary { background-color: #007BFF; border: none; }
         .btn-primary:hover { background-color: #0056b3; }
         footer { margin-top: 40px;  padding: 20px 0; background-color: linear-gradient(to bottom, #4a90e2, #1c1f26); text-align: center; }
@@ -25,7 +23,7 @@
     </script>
     <div class="rain"></div>
     <script src="js/rain.js"></script>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" display="inline-block">
         <a class="navbar-brand" href="index.html">Product of Sech Team</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,96 +32,51 @@
     <nav class="catalog">
         <ul>
             <li class="member">
-                <span class="rootmember">Thành viên</span>
-                <ul class="nodemember">
-                    <li>
-                        <a href="profileThuc.html">Phan Ngọc Thức</a>
-                        <a href="profileThien.html">Tống Phúc Thiện</a>
-                        <a href="profileNam.html">Bùi Phương Nam</a>
-                        <a href="profilePhuc.html">Phan Gia Phúc</a>
-                        <a href="profilePhuong.html">Nguyễn Danh Phương</a>
-                    </li>
+                <p class="root">Thành viên</p>
+                <ul class="node">
+                        <li><a href="profileThuc.html">Phan Ngọc Thức</a> </li>
+                        <li><a href="profileThien.html">Tống Phúc Thiện</a> </li>
+                        <li><a href="profileNam.html">Bùi Phương Nam</a> </li>
+                        <li><a href="profilePhuc.html">Phan Gia Phúc</a> </li>
+                        <li><a href="profilePhuong.html">Nguyễn Danh Phương</a> </li>
                 </ul>
             </li>
             <li>
-                <p>Tin tức</p>
+                <p  class="root">Tin tức</p>
+            </li>
+            <li >
+                <p class="root">Thị trường</p>
             </li>
             <li>
-                <p>Thị trường</p>
-            </li>
-            <li>
-                <p>Đóng góp ý kiến</p>
+                <p class="root">Đóng góp ý kiến</p>
             </li>
         </ul>
     </nav>
-    <div class="sidebar" id = "sidebar">
-        <div class="header">Members</div>
-        <div class="contact" id = "contact">
-            <a href="profileThuc.html">
-                <img src="img/images.jpg" alt="Avatar">
-                <span>Phan Ngọc Thức</span>
-            </a>
-        </div>
-        <div class="contact">
-            <a href="profileThien.html">
-                <img src="img/ab67616d0000b273ddff87d44e3d726372ef7f56.jpg" alt="Avatar">
-                <span>Tống Phúc Thiện</span>
-            </a>
-        </div>
-        <div class="contact">
-            <a href="profileNam.html">
-                <img src="img/Gay_Pride_Flag.svg.png" alt="Avatar">
-                <span>Bùi Phương Nam</span>
-                <center><span>(Leader)</span></center>
-            </a>
-        </div>
-        <div class="contact">
-            <a href="profilePhuc.html">
-                <img src="img/images (1).jpg" alt="Avatar">
-                <span>Phan Gia Phúc</span>
-            </a>
-        </div>
-        <div class="contact">
-            <a href="profilePhuong.html">
-                <img src="img/math-header.jpg" alt="Avatar">
-                <span>Nguyễn Danh Phương</span>
-            </a>
-        </div>  
-    </div>    
-    <script>
-        const sidebar = document.querySelector(".sidebar");
-        sidebar.addEventListener("mouseenter", () => {
-            sidebar.style.right = "0";
-        });
-        sidebar.addEventListener("mouseleave", () => {
-            sidebar.style.right = "-185px";
-        });
-    </script>
     <div class="content">
         <div class="container">
             <form id="dataForm">
                 <div class="form-group">
-                    <label for="value1" style="color: white; font-weight: bold;">Transaction date</label>
+                    <label for="value1" class="form-content">Transaction date</label>
                     <input type="number" class="form-control" id="value1" placeholder="Transaction date" required>
                 </div>
                 <div class="form-group">
-                    <label for="value2" style="color: white; font-weight: bold;">House age</label>
+                    <label for="value2" class="form-content">House age</label>
                     <input type="number" class="form-control" id="value2" placeholder="House age" required>
                 </div>
                 <div class="form-group">
-                    <label for="value3" style="color: white; font-weight: bold;">Distance to the nearest MRT station</label>
+                    <label for="value3" class="form-content">Distance to the nearest MRT station</label>
                     <input type="number" class="form-control" id="value3" placeholder="Distance to the nearest MRT station" required>
                 </div>
                 <div class="form-group">
-                    <label for="value4" style="color: white; font-weight: bold;">Number of convenience stores</label>
+                    <label for="value4" class="form-content">Number of convenience stores</label>
                     <input type="number" class="form-control" id="value4" placeholder="Number of convenience stores" required>
                 </div>
                 <div class="form-group">
-                    <label for="value5" style="color: white; font-weight: bold;">Latitude</label>
+                    <label for="value5" class="form-content">Latitude</label>
                     <input type="number" class="form-control" id="value5" placeholder="Latitude" required>
                 </div>
                 <div class="form-group">
-                    <label for="value6" style="color: white; font-weight: bold;">Longitude</label>
+                    <label for="value6" class="form-content">Longitude</label>
                     <input type="number" class="form-control" id="value6" placeholder="Longitude" required>
                 </div>
                 <button type="button" class="btn btn-primary" onclick="submitData()">Send</button>
