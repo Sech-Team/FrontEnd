@@ -183,7 +183,7 @@ h1 {
 .comment{
   position: absolute;
   width: 500px;
-  transform: translateX(610px) translateY(-30px);
+  transform: translateX(24em) ;
   justify-content: flex-end;
   display: none;
 }
@@ -209,9 +209,9 @@ button {
 
 #map {
   margin-left: 37em;
-  transform: translateY(-40em);
-  height: 30em; 
-  width: 62vw;
+  transform: translateY(-42em);
+  height: 33em; 
+  width: 65em;
   /* position: ; */
 }
 
