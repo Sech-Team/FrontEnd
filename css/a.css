@@ -1,7 +1,8 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: linear-gradient(to right,#ff6e7f, #bfe9ff);
+  background-image: url('https://static.vecteezy.com/system/resources/previews/000/098/045/non_2x/vector-houses-and-trees-pattern-background.jpg');
+  /* background-size: cover; */
 }
 
 /* .sidebar {
@@ -14,7 +15,7 @@ body {
   z-index: 1; top: 0; right: -185px;
   padding-top: 20px;
   transition: right 0.3s ease;
-}  */
+}  */ 
 
 .header {
   font-size: 18px;
@@ -179,7 +180,7 @@ h1 {
   display: none;
 }
 
-button{
+button {
   border:none;
   border-radius: 10px;
   background-color: #0055cc;
@@ -188,6 +189,19 @@ button{
   justify-content: flex-end;
   padding: 5px 40px;
 } 
+
+#dataForm input {
+  width: 350px;
+}
+
+#map {
+  margin-left: 440px;
+  transform: translateY(-550px);
+  height: 80vh; 
+  width: 62vw;
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
