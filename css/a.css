@@ -5,6 +5,20 @@ body {
   background: linear-gradient(to bottom, #4a90e2, #1c1f26);
 }
 
+.sidebar {
+  height: 100%; width: 260px;
+  position: fixed;
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1; top: 0; right: -185px;
+  padding-top: 20px;
+  transition: right 0.3s ease;
+}
+/* .sidebar {transition: right 0.3s ease; height: 100%; width: 260px   ; position: fixed; z-index: 1; top: 0; right: -185px; background-color: #ffffff; padding-top: 20px; }  */
+
+
 nav.catalog ul{
   transform: translateX(80px);
   list-style: none;
@@ -16,10 +30,6 @@ nav.catalog ul{
   justify-content: center;
 }
 
-.rootmember{
-  border: 1px solid black;
-}
-
 .nodemember li a{
   transform: translateX(-140px);
   display:flex;
@@ -27,9 +37,9 @@ nav.catalog ul{
   justify-content: flex-start;
   color:black;
   border: 1px solid black;
-  /* opacity: 0;
-  visibility: hidden; */
-} 
+  opacity: 0;
+  visibility: hidden;
+}  
 
 .header {
   font-size: 18px;
@@ -59,20 +69,6 @@ nav.catalog ul{
 .contact span {
   flex: 1;
   font-size: 16px;
-}
-
-.status {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.status.online {
-  background-color: green;
-}
-
-.status.offline {
-  background-color: gray;
 }
 
 .contact a {
@@ -117,5 +113,120 @@ h1 {
   100% {
     transform: translateY(110vh);
     opacity: 0.2;
+  }
+}
+.logo-container {
+  margin-right: 20px; 
+}
+
+.logo {  
+  border-radius: 20%;
+  height: 50px; 
+  width: auto;
+}
+.navbar { 
+  margin-bottom: 20px; 
+  background-color: linear-gradient(to bottom, #4a90e2, #1c1f26); 
+  display: flex; /* Sử dụng Flexbox */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: space-between; /* Phân bổ khoảng cách giữa logo và các mục */
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+}
+
+.navbar ul li {
+  
+  position: relative;
+  margin-right: 30px;
+}
+
+.navbar ul li a {
+
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 16px;
+  /* font-style: bold; */
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+  background-color: #0055cc;
+  border-radius: 5px;
+  color: #e0e0e0;
+}
+
+.navbar a{
+  color: white;
+}
+
+/* Dropdown Menu (Chiều Dọc) */
+.dropdown-menu {
+  display: none;
+  flex-direction: column; /* Hiển thị các mục theo chiều dọc */
+  position: absolute;
+  top: 100%; /* Menu con nằm ngay dưới menu cha */
+  left: 0;
+  background-color: #0055cc;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-menu li {
+  width: 80%; /* Chiều rộng của các mục menu con */
+}
+
+.dropdown-menu li a {
+  
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  /* margin-left: 100px; */
+  background-color: #0077ff;
+  color: #e0e0e0;
+}
+
+/* Hiển thị menu con khi hover */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar ul li {
+      margin-bottom: 10px;
+  }
+
+  .dropdown-menu {
+      position: relative;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      box-shadow: none;
   }
 }
