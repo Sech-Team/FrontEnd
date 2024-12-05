@@ -172,27 +172,6 @@ h1 {
   transform: translateY(0);
 }
 
-@media (max-width: 768px) {
-  .dropdown-menu {
-    width: 100%;
-    position: relative;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    box-shadow: none;
-  }
-}
-
-/* Hide dropdown menu on mobile by default */
-@media (max-width: 768px) {
-  .dropdown-menu {
-    display: none;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: flex;
-  }
-}
 
 .comment{
   width: 500px;
@@ -211,7 +190,6 @@ button{
   padding: 5px 40px;
 } 
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .navbar ul {
       flex-direction: column;
