@@ -135,9 +135,16 @@ h1 {
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
   text-decoration-color: #e0e0e0;
-  /* background-color: #0055cc;
+  transition: all 0.25 ease-in;
   border-radius: 5px;
-  color: #e0e0e0; */
+  transition: all 0.25s ease;
+}
+
+.navbar ul.dropdown-menu li a:hover {
+  background-color: #acc9f3;
+  border-radius: 5px;
+  color: #4f4f4f;
+  text-decoration-color: #4f4f4f;
 }
 
 .navbar a{
@@ -200,9 +207,9 @@ button {
 }
 
 #map {
-  margin-left: 440px;
-  transform: translateY(-550px);
-  height: 80vh; 
+  margin-left: 37em;
+  transform: translateY(-45em);
+  height: 30em; 
   width: 62vw;
 }
 
