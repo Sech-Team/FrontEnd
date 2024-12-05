@@ -69,7 +69,7 @@ body {
 }
 .profile-container img {
   border-radius: 50%;
-  margin-top: 10px;
+  margin-top: 50px;
   width: 150px;
   height: 150px;
 }
@@ -93,7 +93,9 @@ a img{
 }
 
 .subimage{
-  width: inherit;
+  margin-top: -40px;
+  width: 480px;
+  margin-left : 10px;
   position: absolute;
   display: flex;
   justify-content: space-between;
