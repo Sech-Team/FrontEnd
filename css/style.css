@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #003366, #000);
+  background: url('https://media-cdn-v2.laodong.vn/storage/newsportal/2024/4/30/1334294/Phao-Hoa-Tphcm-30-4.jpeg') no-repeat center center fixed;
+  background-size: cover;
   color: white;
   font-family: Arial, sans-serif;
   height: 100vh;
@@ -47,16 +48,6 @@ h1 {
   }
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 .profile-container {
   width: 500px;
   height: 400px;
@@ -111,4 +102,22 @@ a img{
 .subimage div a img{
   width: 40px;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+  }
+  textarea, select, button {
+  width: 100vw;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  }
+  .box {
+  width: 100vw;
+  }
 }
