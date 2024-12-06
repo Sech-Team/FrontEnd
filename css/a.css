@@ -182,17 +182,19 @@ h1 {
   transform: translateX(1em);
   padding: 10px 15px;
   color: white;
+  
   cursor: pointer;
   font-size: 14px; 
-  font-family: Arial, sans-serif;
-  width: 100%; 
+  font-family: 'Roboto', sans-serif;
+  width: 90%; 
   transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 .dropdown-menu li:hover {
   background-color: #555;
-  text-decoration: underline; 
-  text-decoration-color: #e0e0e0;
+
+  text-decoration: none;
+  border-radius: 10px;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -200,6 +202,7 @@ h1 {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  
 }
 
 
@@ -225,13 +228,20 @@ button{
 } 
 
 @media (max-width: 768px) {
-  .navbar ul {
+  .navbar {
       flex-direction: column;
       align-items: flex-start;
   }
 
+  .navbar ul {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 0;
+  }
+
   .navbar ul li {
       margin-bottom: 10px;
+      margin-right: 0;
   }
 
   .dropdown-menu {
@@ -240,6 +250,20 @@ button{
       opacity: 1;
       visibility: visible;
       box-shadow: none;
+  }
+
+  .comment {
+      width: 100%;
+      transform: translateX(0);
+  }
+
+  .form-group {
+      width: 100%;
+  }
+
+  #map {
+      width: 100%;
+      margin-left: 0;
   }
 }
 
