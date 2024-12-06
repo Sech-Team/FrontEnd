@@ -179,14 +179,13 @@ h1 {
 }
 
 .dropdown-menu li {
+  transform: translateX(1em);
   padding: 10px 15px;
   color: white;
   cursor: pointer;
   font-size: 14px; 
   font-family: Arial, sans-serif;
-  /* text-align: center; */
   width: 100%; 
-  box-sizing: border-box; 
   transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
