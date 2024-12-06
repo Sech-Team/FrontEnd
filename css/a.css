@@ -134,7 +134,7 @@ h1 {
 }
 
 .navbar ul li a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
   text-decoration-color: #e0e0e0;
@@ -270,6 +270,12 @@ button{
 /* #map{
   transform: translateY(-15px);
 } */
+
+.form-content{
+  color: #000000; 
+  font-weight: bold;
+  mix-blend-mode:difference;
+}
 
 #result  {
   height: 50px;
