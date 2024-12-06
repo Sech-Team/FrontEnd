@@ -27,11 +27,11 @@
         .content { padding: 0px; }  
     </style>
     <script src = "js/ggmap.js" defer></script>
+    <script src="js/music.js" defer></script>
 </head>
 <body>
-    <script type="text/javascript">
-        console.log("Welcome to our website!");
-    </script>
+    <audio id="theme-music" loop="loop" autoplay></audio>
+
     <div class="rain"></div>
     <script src="js/rain.js"></script>
     <nav class="navbar">
@@ -60,7 +60,7 @@
             </li>
             <li><a href="donggopykien.html"><strong>Đóng góp ý kiến</strong></a></li>
             <span>
-                <a href="javascript:void(0)" class="menu-icon" onclick="openSidebar()">&#9776;</a>
+                <a href="javascript:void(0)" class="menu-icon" onclick="changeMusic()">&#9776;</a>
             </span>
         </ul>
     </nav>
@@ -93,6 +93,7 @@
                     <input type="number" class="form-control" id="value6" placeholder="Longitude" required>
                 </div>
                 <button type="button" onclick="submitData()">Send</button>
+
                 <p class="comment">Giá không đúng như dự đoán? Đóng góp cho chúng tôi tại <a href="donggopykien.html"> đây</a></p>
             </form>
             <p id="result" class="text-center text-success font-weight-bold"></p>

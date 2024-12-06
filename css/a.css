@@ -1,7 +1,9 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: linear-gradient(to right,#ff6e7f, #bfe9ff);
+  /* background: linear-gradient(to right,#ff6e7f, #bfe9ff); */
+  background: url('../ms/qzb4u7833n2e1.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* .sidebar {
@@ -101,7 +103,9 @@ h1 {
 }
 .navbar { 
   margin-bottom: 70px; 
-  background-color: rgb(151, 151, 231); 
+  /* background-color: rgb(151, 151, 231);  */
+  background: url('../ms/7mSqO-sYvxV22xxZTdTp7vvj4SDkbIqQzphakadXiEI.webp') no-repeat center center fixed;
+  background-size: cover;
   display: flex; 
   align-items: center;
   justify-content: space-between; 
@@ -152,7 +156,7 @@ h1 {
   background-color: #0055cc;
   list-style: none;
   padding: 10px 0;
-  width:300px;
+  width:215px auto;
   border-radius: 5px;
   box-shadow: 8px 9px 10px rgba(5, 5, 5, 0.365);
   opacity: 0;
