@@ -130,7 +130,7 @@ h1 {
   padding: 10px 20px;
   display: inline-block;
   font-size: 16px;
-  transition: background 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar ul li a:hover {
@@ -149,32 +149,63 @@ h1 {
 
 .dropdown-menu {
   display: none;
-  flex-direction: column; 
+  flex-direction: column;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #0055cc;
+  background-color: #333;
   list-style: none;
-  padding: 10px 0;
-  width:215px auto;
+  padding: 0;
+  margin: 0;
+  min-width: max-content;
   border-radius: 5px;
-  box-shadow: 8px 9px 10px rgba(5, 5, 5, 0.365);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
-.dropdown-menu li {
-  width: 80%; 
+.dropdown-menu::before {
+  content: ""; 
+  position: absolute;
+  top: -5px; 
+  left: 0;
+  width: 100%; 
+  height: 5px; 
+  background-color: #00aaff; 
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
-/* Hiển thị menu con khi hover */
+.dropdown-menu li {
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px; 
+  font-family: Arial, sans-serif;
+  /* text-align: center; */
+  width: 100%; 
+  box-sizing: border-box; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.dropdown-menu li:hover {
+  background-color: #555;
+  text-decoration: underline; 
+  text-decoration-color: #e0e0e0;
+}
+
 .dropdown:hover .dropdown-menu {
+  display: flex;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
+
+
+
+
 
 
 .comment{
@@ -220,7 +251,7 @@ button{
 #result  {
   height: 50px;
   overflow: hidden;
-  margin-top: 15px;
+  margin-top: 40px;
 }
 
 .form-group{
