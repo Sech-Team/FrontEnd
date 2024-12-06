@@ -213,6 +213,24 @@ button{
   }
 }
 
-#map{
+/* #map{
   transform: translateY(-15px);
+} */
+
+#result  {
+  height: 50px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.form-group{
+  width: 500px;
+}
+
+#map {
+  height: 40em;
+  width: 40em;
+  border: 2px solid #ccc;
+  margin-left: 4em;
+  margin-top: 2em;
 }

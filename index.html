@@ -17,9 +17,9 @@
     />
     <style>
         body {margin: 0;}
-        #map {margin: 0 auto; height: 40em; width: 80em;}
+        /* #map {height: 40em; width: 40em; margin: 0 auto;} */
         @media (max-width: 768px) {
-            #map {height: 20em; width: 100%;}
+            #map {height: 20em; width: 100%; margin: 0 auto;}
         }
         .btn-primary { background-color: #007BFF; border: none; }
         .btn-primary:hover { background-color: #0056b3; }
@@ -64,39 +64,46 @@
             </span>
         </ul>
     </nav>
-    <div id='map'></div>
     <div class="content">
         <div class="container">
-            <form id="dataForm">
-                <div class="form-group">
-                    <label for="value1" class="form-content" style="color: white; font-weight: bold;">Transaction date</label>
-                    <input type="number" class="form-control" id="value1" placeholder="Transaction date" required>
+            <div class="row">
+                <!-- Form Section -->
+                <div class="col-md-6">
+                    <form id="dataForm">
+                        <div class="form-group">
+                            <label for="value1" class="form-content" style="color: white; font-weight: bold;">Transaction date</label>
+                            <input type="number" class="form-control" id="value1" placeholder="Transaction date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="value2" class="form-content" style="color: white; font-weight: bold;">House age</label>
+                            <input type="number" class="form-control" id="value2" placeholder="House age" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="value3" class="form-content" style="color: white; font-weight: bold;">Distance to the nearest MRT station</label>
+                            <input type="number" class="form-control" id="value3" placeholder="Distance to the nearest MRT station" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="value4" class="form-content" style="color: white; font-weight: bold;">Number of convenience stores</label>
+                            <input type="number" class="form-control" id="value4" placeholder="Number of convenience stores" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="value5" class="form-content" style="color: white; font-weight: bold;">Latitude</label>
+                            <input type="number" class="form-control" id="value5" placeholder="Latitude" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="value6" class="form-content" style="color: white; font-weight: bold;">Longitude</label>
+                            <input type="number" class="form-control" id="value6" placeholder="Longitude" required>
+                        </div>
+                        <button type="button" onclick="submitData()">Send</button>
+                    </form>
+                    <p id="result" class="custom" style="color: white; font-weight: bold;"></p>
                 </div>
-                <div class="form-group">
-                    <label for="value2" class="form-content" style="color: white; font-weight: bold;">House age</label>
-                    <input type="number" class="form-control" id="value2" placeholder="House age" required>
+                
+                <!-- Map Section -->
+                <div class="col-md-6">
+                    <div id="map"></div>
                 </div>
-                <div class="form-group">
-                    <label for="value3" class="form-content" style="color: white; font-weight: bold;">Distance to the nearest MRT station</label>
-                    <input type="number" class="form-control" id="value3" placeholder="Distance to the nearest MRT station" required>
-                </div>
-                <div class="form-group">
-                    <label for="value4" class="form-content" style="color: white; font-weight: bold;">Number of convenience stores</label>
-                    <input type="number" class="form-control" id="value4" placeholder="Number of convenience stores" required>
-                </div>
-                <div class="form-group">
-                    <label for="value5" class="form-content" style="color: white; font-weight: bold;">Latitude</label>
-                    <input type="number" class="form-control" id="value5" placeholder="Latitude" required>
-                </div>
-                <div class="form-group">
-                    <label for="value6" class="form-content" style="color: white; font-weight: bold;">Longitude</label>
-                    <input type="number" class="form-control" id="value6" placeholder="Longitude" required>
-                </div>
-                <button type="button" onclick="submitData()">Send</button>
-
-                <p class="comment">Giá không đúng như dự đoán? Đóng góp cho chúng tôi tại <a href="donggopykien.html"> đây</a></p>
-            </form>
-            <p id="result" class="text-center text-success font-weight-bold"></p>
+            </div>
         </div>
     </div>
     <footer>
@@ -104,7 +111,7 @@
     </footer>
     <script>
         function submitData() {
-            document.querySelector('.comment').style.display = 'flex';
+            // document.querySelector('.comment').style.visibility = 'visible';
 
             const values = {
                 value1: document.getElementById('value1').value,
