@@ -227,6 +227,12 @@ button{
   width: 500px;
 }
 
+@media (max-width: 768px) {
+  .form-group {
+    width: 100%;
+  }
+}
+
 #map {
   height: 40em;
   width: 40em;
