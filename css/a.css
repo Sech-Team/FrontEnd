@@ -272,9 +272,8 @@ button{
 } */
 
 .form-content{
-  color: #000000; 
   font-weight: bold;
-  mix-blend-mode:difference;
+  color: white;
 }
 
 #result  {
