@@ -15,7 +15,26 @@
       href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
       type="text/css"
     />
+    
     <style>
+        .spinner {
+            width: 25px;
+            height: 25px;
+            border: 5px solid #e0e0e0; /* Background of spinner */
+            border-top: 5px solid #007bff; /* Foreground of spinner */
+            border-radius: 50%;
+            animation: spin 1s linear infinite; /* Animation */
+        }
+
+            /* Keyframes for spin effect */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
         body {margin: 0;}
         /* #map {height: 40em; width: 40em; margin: 0 auto;} */
         @media (max-width: 768px) {
@@ -96,7 +115,7 @@
                         </div>
                         <button type="button" onclick="submitData()">Send</button>
                     </form>
-                    <p id="result" class="custom" style="color: white; font-weight: bold;"></p>
+                    <p id="result" class="custom" style="color: white; font-weight: bold; font-size: large;"></p>
                 </div>
                 
                 <!-- Map Section -->
@@ -111,8 +130,6 @@
     </footer>
     <script>
         function submitData() {
-            // document.querySelector('.comment').style.visibility = 'visible';
-
             const values = {
                 value1: document.getElementById('value1').value,
                 value2: document.getElementById('value2').value,
