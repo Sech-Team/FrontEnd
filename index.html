@@ -126,7 +126,7 @@
                     values[key] = null;
                 }
             }
-            document.getElementById('result').textContent = `Giá trị đã nhập: ${values.value1}, ${values.value2}, ${values.value3}, ${values.value4}, ${values.value5}, ${values.value6}`;
+            document.getElementById('result').textContent = 'Đang xử lý...';
             fetch('https://backend-fhuz.onrender.com/process', {
                 method: 'POST',
                 headers: {
