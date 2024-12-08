@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contribute comments</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <style>
+        @media (max-width: 768px) {
+            .placeholder {
+                width: 100%;
+                height: 50%;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="snow"></div>
     <script src="js/snow.js"></script>
     <form action="donggopykien.html">
-        <textarea placeholder="Đóng góp ý kiến tại đây" id="comment" name="contributecomment" style="width: 100%; height: 20em;"></textarea>
+        <textarea placeholder="Đóng góp ý kiến tại đây" id="comment" name="contributecomment" style="width: 60em; height: 40em;"></textarea>
         <label for="selection" class="box">Chọn nội dung đóng góp ý kiến</label>
         <select id="selection" class="box" name="selection">
             <option value=""></option>
