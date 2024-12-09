@@ -214,6 +214,14 @@ h1 {
   visibility: hidden;
 }
 
+@media (max-width: 768px) {
+  .comment {
+    width: 100%;
+    left: 0;
+    font-size: 80%;
+  }
+}
+
 button{
   border:none;
   border-radius: 10px;
