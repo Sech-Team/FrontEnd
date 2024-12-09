@@ -113,6 +113,9 @@
                             <label for="value6" class="form-content">Longitude</label>
                             <input type="number" class="form-control" id="value6" placeholder="Longitude" required>
                         </div>
+                        <div class="comment">
+                            
+                        </div>
                         <button type="button" onclick="submitData()">Send</button>
                     </form>
                     <p id="result" class="custom" style="color: white; font-weight: bold; font-size: large;"></p>
@@ -121,6 +124,7 @@
                 <!-- Map Section -->
                 <div class="col-md-6">
                     <div id="map"></div>
+                    <p class="comment" id="commentcontribute">Giá dự đoán chênh lệch so với giá thực tế? Đóng góp tại <a href="donggopykien.html">đây</a></p>
                 </div>
             </div>
         </div>
@@ -130,6 +134,7 @@
     </footer>
     <script>
         function submitData() {
+            document.getElementById('commentcontribute').style.visibility = 'visible';
             const values = {
                 value1: document.getElementById('value1').value,
                 value2: document.getElementById('value2').value,
