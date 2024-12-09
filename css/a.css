@@ -266,12 +266,29 @@ button{
       margin-left: 0;
   }
 }
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+  outline: none; 
+  border: 2px solid #007bff;
+  color: #ffffff;
+}
+.form-control::placeholder {
+  /* color: rgba(255, 255, 255, 0.7);  */
+  color: black;
+  font-style: bold;
 
+}
+.form-control:valid {
+  /* color: rgba(255, 255, 255, 0.7);  */
+  color: black;
+  font-style: bold;
+}
 /* #map{
   transform: translateY(-15px);
 } */
 
 .form-content{
+  /* background-color: rgba(255, 255, 255, 0.8); */
   font-weight: bold;
   color: white;
 }
@@ -284,6 +301,10 @@ button{
 
 .form-group{
   width: 500px;
+}
+
+.form-control{
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 768px) {
