@@ -84,48 +84,52 @@
         </ul>
     </nav>
     <div class="content">
-        <div class="container">
-            <div class="row">
-                <!-- Form Section -->
-                <div class="col-md-6">
-                    <form id="dataForm">
-                        <div class="form-group">
-                            <label for="value1" class="form-content">Transaction date</label>
-                            <input type="number" class="form-control" id="value1" placeholder="Transaction date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="value2" class="form-content">House age</label>
-                            <input type="number" class="form-control" id="value2" placeholder="House age" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="value3" class="form-content">Distance to the nearest MRT station</label>
-                            <input type="number" class="form-control" id="value3" placeholder="Distance to the nearest MRT station" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="value4" class="form-content">Number of convenience stores</label>
-                            <input type="number" class="form-control" id="value4" placeholder="Number of convenience stores" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="value5" class="form-content">Latitude</label>
-                            <input type="number" class="form-control" id="value5" placeholder="Latitude" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="value6" class="form-content">Longitude</label>
-                            <input type="number" class="form-control" id="value6" placeholder="Longitude" required>
-                        </div>
-                        
-                        <button type="button" onclick="submitData()">Send</button>
-                    </form>
-                    <p id="result" class="custom" style="color: white; font-weight: bold; font-size: large;"></p>
+        <form id="dataForm" class="filter">
+            <div class="form-filter">
+                <div class="margin-filter">
+                    <label for="value1" class="form-content">Transaction date</label>
                 </div>
-                
-                <!-- Map Section -->
-                <div class="col-md-6">
-                    <div id="map"></div>
-                    <p class="comment" id="commentcontribute">Giá dự đoán chênh lệch so với giá thực tế? Đóng góp tại <a href="donggopykien.html">đây</a></p>
-                </div>
+                <input type="number" id="value1" placeholder="Min" class="form-control">
+                <input type="number" id="value1" placeholder="Max" class="form-control">
             </div>
-        </div>
+            <div class="form-filter">
+                <div class="margin-filter">
+                    <label for="value2" class="form-content">House age</label>
+                </div>
+                <input type="number" id="value2" placeholder="Min" class="form-control">
+                <input type="number" id="value2" placeholder="Max" class="form-control">
+            </div>
+            <div class="form-filter">
+                <div class="margin-filter">
+                    <label for="value3" class="form-content">Distance to the nearest MRT station</label>
+                </div>
+                <input type="number" id="value3" placeholder="Min" class="form-control">
+                <input type="number" id="value3" placeholder="Max" class="form-control">
+            </div>
+            <div class="form-filter">
+                <div class="margin-filter">
+                    <label for="value4" class="form-content">Number of convenience stores</label>
+                </div>
+                <input type="number" id="value4" placeholder="Min" class="form-control">
+                <input type="number" id="value4" placeholder="Max" class="form-control">
+            </div>
+            <div class="form-filter">
+                <div class="margin-filter">
+                    <label for="value5" class="form-content">Latitude</label>
+                </div>
+                <input type="number" id="value5" placeholder="Min" class="form-control">
+                <input type="number" id="value5" placeholder="Max" class="form-control">
+            </div>
+            <div class="form-filter">
+                <div class="margin-filter">
+                    <label for="value6" class="form-content">Longitude</label>
+                </div>
+                <input type="number" id="value6" placeholder="Min" class="form-control">
+                <input type="number" id="value6" placeholder="Max" class="form-control">
+            </div>
+            
+            <button type="button" onclick="" style="position:absolute; transform: translateX(37em) translateY(10em);">Send</button>
+        </form>
     </div>
     <footer>
         <p style="color: white;">&copy; 2024 Sech Team, Inc. All rights reserved.</p>

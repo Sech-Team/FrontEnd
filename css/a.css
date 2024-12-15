@@ -293,6 +293,33 @@ button{
   color: white;
 }
 
+.filter{
+  /* margin-top: 5em; */
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-filter{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 20em;
+  padding: 0 1%;
+}
+
+.margin-filter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 3em;
+}
+
+.form-filter input{
+  width: 90%;
+} 
+
 #result  {
   height: 50px;
   overflow: hidden;
