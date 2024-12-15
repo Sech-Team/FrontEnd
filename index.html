@@ -48,7 +48,7 @@
     <script src = "js/ggmap.js" defer></script>
     <script src="js/music.js" defer></script>
 </head>
-<body>
+<body style="overflow: hidden;">
     <audio id="theme-music" loop="loop" autoplay></audio>
 
     <div class="rain"></div>
@@ -83,91 +83,15 @@
             </span>
         </ul>
     </nav>
-    <div class="content">
-        <div class="container">
-            <div class="row">
-                <!-- Form Section -->
-                <div class="col-md-6">
-                    <form id="dataForm">
-                        <div class="form-group">
-                            <label for="value1" class="form-content">Transaction date</label>
-                            <input type="number" class="form-control" id="value1" placeholder="Transaction date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="value2" class="form-content">House age</label>
-                            <input type="number" class="form-control" id="value2" placeholder="House age" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="value3" class="form-content">Distance to the nearest MRT station</label>
-                            <input type="number" class="form-control" id="value3" placeholder="Distance to the nearest MRT station" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="value4" class="form-content">Number of convenience stores</label>
-                            <input type="number" class="form-control" id="value4" placeholder="Number of convenience stores" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="value5" class="form-content">Latitude</label>
-                            <input type="number" class="form-control" id="value5" placeholder="Latitude" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="value6" class="form-content">Longitude</label>
-                            <input type="number" class="form-control" id="value6" placeholder="Longitude" required>
-                        </div>
-                        
-                        <button type="button" onclick="submitData()">Send</button>
-                    </form>
-                    <p id="result" class="custom" style="color: white; font-weight: bold; font-size: large;"></p>
-                </div>
-                
-                <!-- Map Section -->
-                <div class="col-md-6">
-                    <div id="map"></div>
-                    <p class="comment" id="commentcontribute">Giá dự đoán chênh lệch so với giá thực tế? Đóng góp tại <a href="donggopykien.html">đây</a></p>
-                </div>
-            </div>
+    <div>
+        <div class="home">
+            <a href="input.html">Nhap thu cong</a>
+            <a href="filter.html">Loc</a>
         </div>
     </div>
-    <footer>
+    <footer style="transform: translateX(2em) translateY(10em);">
         <p style="color: white;">&copy; 2024 Sech Team, Inc. All rights reserved.</p>
     </footer>
-    <script>
-        function submitData() {
-            document.getElementById('commentcontribute').style.visibility = 'visible';
-            const values = {
-                value1: document.getElementById('value1').value,
-                value2: document.getElementById('value2').value,
-                value3: document.getElementById('value3').value,
-                value4: document.getElementById('value4').value,
-                value5: document.getElementById('value5').value,
-                value6: document.getElementById('value6').value,
-            };
-            for (let key in values) {
-                if (values[key] === '') {
-                    values[key] = null;
-                }
-            }
-            document.getElementById('result').textContent = 'Đang xử lý...';
-            fetch('https://backend-fhuz.onrender.com/process', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(values),
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.result !== undefined) {
-                    document.getElementById('result').textContent = `Kết quả: ${data.result}`;
-                } else {
-                    document.getElementById('result').textContent = `Lỗi: ${data.error}`;
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('result').textContent = `Có lỗi xảy ra!`;
-            });
-        }
-    </script>
 </body>
 </html>
 </li>
