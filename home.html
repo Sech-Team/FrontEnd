@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự đoán giá nhà</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/a.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+      type="text/css"
+    />
+    
+    <style>
+        .spinner {
+            width: 25px;
+            height: 25px;
+            border: 5px solid #e0e0e0; /* Background of spinner */
+            border-top: 5px solid #007bff; /* Foreground of spinner */
+            border-radius: 50%;
+            animation: spin 1s linear infinite; /* Animation */
+        }
+
+            /* Keyframes for spin effect */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        body {margin: 0;}
+        /* #map {height: 40em; width: 40em; margin: 0 auto;} */
+        @media (max-width: 768px) {
+            #map {height: 20em; width: 100%; margin: 0 auto;}
+        }
+        .btn-primary { background-color: #007BFF; border: none; }
+        .btn-primary:hover { background-color: #0056b3; }
+        footer { margin-top: 40px;  padding: 20px 0; background-color: linear-gradient(to bottom, #4a90e2, #1c1f26); text-align: center; }
+        .content { padding: 0px; }  
+    </style>
+    <script src = "js/ggmap.js" defer></script>
+    <script src="js/music.js" defer></script>
+</head>
+<body style="overflow: hidden;">
+    <audio id="theme-music" loop="loop" autoplay></audio>
+
+    <div class="rain"></div>
+    <script src="js/rain.js"></script>
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html"><img src="img/images.png" alt="HCMUS Logo" class="logo"></a>
+            <span style="color:white; font-weight:bold">Sech Team</span>
+        </div>
+        <ul>
+            <li class="dropdown">
+                <a href="#"><strong>Thành viên</strong></a>
+                <ul class="dropdown-menu">
+                    <li><a href="profileThuc.html">Phan Ngọc Thức</a></li>
+                    <li><a href="profileThien.html">Tống Phúc Thiện</a></li>
+                    <li><a href="profilePhuong.html">Nguyễn Danh Phương</a></li>
+                    <li><a href="profileNam.html">Bùi Phương Nam</a></li>
+                    <li><a href="profilePhuc.html">Phan Gia Phúc</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#"><strong>Tin tức</strong></a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://tuoitre.vn/nha-dat.htm" target="_blank">Tuổi trẻ</a></li>
+                    <li><a href="https://thanhnien.vn/gia-nha-dat-tags527457.html" target="_blank">Thanh niên</a></li>
+                    <li><a href="https://vnexpress.net/bat-dong-san" target="_blank">Vnexpress</a></li>
+                </ul>
+            </li>
+            <li><a href="donggopykien.html"><strong>Đóng góp ý kiến</strong></a></li>
+            <span>
+                <a href="javascript:void(0)" class="menu-icon" onclick="changeMusic()">&#9776;</a>
+            </span>
+        </ul>
+    </nav>
+    <div>
+        <div class="home">
+            <a href="index.html">Nhap thu cong</a>
+            <a href="filter.html">Loc</a>
+        </div>
+    </div>
+    <footer style="transform: translateX(2em) translateY(10em);">
+        <p style="color: white;">&copy; 2024 Sech Team, Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+</li>

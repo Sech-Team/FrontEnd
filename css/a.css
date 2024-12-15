@@ -320,6 +320,33 @@ button{
   width: 90%;
 } 
 
+.home{
+  display: flex;
+  flex-direction: column;
+  transform: translateX(37em) translateY(5em);
+}
+
+.home a{
+  text-align: center;
+  font-size: large;
+  width: 9em;
+  margin: 1em 0;
+  background: white;
+  color: black;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  transition: all ease-in-out 0.25s;
+}
+
+.home a:hover{
+  text-decoration: none;
+  background: linear-gradient(135deg, #ff5f6d, #ffc371, #1f4037);background: linear-gradient(135deg, #11998e, #38ef7d, #56ccf2);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transform: translateY(-0.2em);
+}
+
 #result  {
   height: 50px;
   overflow: hidden;
