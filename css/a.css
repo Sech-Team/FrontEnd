@@ -323,7 +323,8 @@ button{
 .home{
   display: flex;
   flex-direction: column;
-  transform: translateX(37em) translateY(5em);
+  align-items: center;
+  
 }
 
 .home a{
