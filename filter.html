@@ -67,50 +67,52 @@
         </ul>
     </nav>
     <div class="content">
-        <form id="dataForm" class="filter">
-            <div class="form-filter">
-                <div class="margin-filter">
-                    <label for="value1" class="form-content">Transaction date</label>
+        <form id="dataForm" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div  class="filter">
+                <div class="form-filter">
+                    <div class="margin-filter">
+                        <label for="value1" class="form-content">Transaction date</label>
+                    </div>
+                    <input type="number" id="value1a" placeholder="Min" class="form-control">
+                    <input type="number" id="value1b" placeholder="Max" class="form-control">
                 </div>
-                <input type="number" id="value1a" placeholder="Min" class="form-control">
-                <input type="number" id="value1b" placeholder="Max" class="form-control">
-            </div>
-            <div class="form-filter">
-                <div class="margin-filter">
-                    <label for="value2" class="form-content">House age</label>
+                <div class="form-filter">
+                    <div class="margin-filter">
+                        <label for="value2" class="form-content">House age</label>
+                    </div>
+                    <input type="number" id="value2a" placeholder="Min" class="form-control">
+                    <input type="number" id="value2b" placeholder="Max" class="form-control">
                 </div>
-                <input type="number" id="value2a" placeholder="Min" class="form-control">
-                <input type="number" id="value2b" placeholder="Max" class="form-control">
-            </div>
-            <div class="form-filter">
-                <div class="margin-filter">
-                    <label for="value3" class="form-content">Distance to the nearest MRT station</label>
+                <div class="form-filter">
+                    <div class="margin-filter">
+                        <label for="value3" class="form-content">Distance to the nearest MRT station</label>
+                    </div>
+                    <input type="number" id="value3a" placeholder="Min" class="form-control">
+                    <input type="number" id="value3b" placeholder="Max" class="form-control">
                 </div>
-                <input type="number" id="value3a" placeholder="Min" class="form-control">
-                <input type="number" id="value3b" placeholder="Max" class="form-control">
-            </div>
-            <div class="form-filter">
-                <div class="margin-filter">
-                    <label for="value4" class="form-content">Number of convenience stores</label>
+                <div class="form-filter">
+                    <div class="margin-filter">
+                        <label for="value4" class="form-content">Number of convenience stores</label>
+                    </div>
+                    <input type="number" id="value4a" placeholder="Min" class="form-control">
+                    <input type="number" id="value4b" placeholder="Max" class="form-control">
                 </div>
-                <input type="number" id="value4a" placeholder="Min" class="form-control">
-                <input type="number" id="value4b" placeholder="Max" class="form-control">
-            </div>
-            <div class="form-filter">
-                <div class="margin-filter">
-                    <label for="value5" class="form-content">Latitude</label>
+                <div class="form-filter">
+                    <div class="margin-filter">
+                        <label for="value5" class="form-content">Latitude</label>
+                    </div>
+                    <input type="number" id="value5a" placeholder="Min" class="form-control">
+                    <input type="number" id="value5b" placeholder="Max" class="form-control">
                 </div>
-                <input type="number" id="value5a" placeholder="Min" class="form-control">
-                <input type="number" id="value5b" placeholder="Max" class="form-control">
-            </div>
-            <div class="form-filter">
-                <div class="margin-filter">
-                    <label for="value6" class="form-content">Longitude</label>
+                <div class="form-filter">
+                    <div class="margin-filter">
+                        <label for="value6" class="form-content">Longitude</label>
+                    </div>
+                    <input type="number" id="value6a" placeholder="Min" class="form-control">
+                    <input type="number" id="value6b" placeholder="Max" class="form-control">
                 </div>
-                <input type="number" id="value6a" placeholder="Min" class="form-control">
-                <input type="number" id="value6b" placeholder="Max" class="form-control">
             </div>
-            <button type="button" onclick="subfil()" style="position:absolute; transform: translateX(37em) translateY(10em); ">Send</button>
+            <button type="button" onclick="subfil()">Send</button>
         </form>
         <table id="result" class="table table-striped table-bordered" style="color: white; font-weight: bold; font-size: large;   background: url('../ms/7mSqO-sYvxV22xxZTdTp7vvj4SDkbIqQzphakadXiEI.webp') no-repeat center center fixed;
   background-size: cover; visibility: hidden;"></table>
