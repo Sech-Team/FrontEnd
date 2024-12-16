@@ -132,14 +132,14 @@
             
         </form>
         <table id="result" class="table table-striped table-bordered" style="color: white; font-weight: bold; font-size: large;   background: url('../ms/7mSqO-sYvxV22xxZTdTp7vvj4SDkbIqQzphakadXiEI.webp') no-repeat center center fixed;
-  background-size: cover;"></table>
-
+  background-size: cover; visibility: hidden;"></table>
     </div>
     <footer>
         <p style="color: white;">&copy; 2024 Sech Team, Inc. All rights reserved.</p>
     </footer>
     <script>
         function submitData() {
+            document.getElementById('result').style.visibility = 'visible';
             document.getElementById('result').textContent = 'Đang xử lý...';
             fetch('https://backend-fhuz.onrender.com/showcsv', {
                 method: 'POST',

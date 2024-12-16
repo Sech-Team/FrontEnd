@@ -337,7 +337,7 @@ button{
   font-weight: bold;
   padding: 0.5em 1em;
   border-radius: 8px;
-  transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.2s;
 }
 
 .home a:hover{
