@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dự đoán giá nhà</title>
+    <title>Lọc thông tin</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/a.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <script src="js/subfilter.js"></script>
     <link
       rel="stylesheet"
       href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
@@ -17,26 +18,7 @@
     />
     
     <style>
-        .spinner {
-            width: 25px;
-            height: 25px;
-            border: 5px solid #e0e0e0; /* Background of spinner */
-            border-top: 5px solid #007bff; /* Foreground of spinner */
-            border-radius: 50%;
-            animation: spin 1s linear infinite; /* Animation */
-        }
-
-            /* Keyframes for spin effect */
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
         body {margin: 0;}
-        /* #map {height: 40em; width: 40em; margin: 0 auto;} */
         @media (max-width: 768px) {
             #map {height: 20em; width: 100%; margin: 0 auto;}
         }
@@ -89,47 +71,45 @@
                 <div class="margin-filter">
                     <label for="value1" class="form-content">Transaction date</label>
                 </div>
-                <input type="number" id="value1" placeholder="Min" class="form-control">
-                <input type="number" id="value1" placeholder="Max" class="form-control">
+                <input type="number" id="value1a" placeholder="Min" class="form-control">
+                <input type="number" id="value1b" placeholder="Max" class="form-control">
             </div>
             <div class="form-filter">
                 <div class="margin-filter">
                     <label for="value2" class="form-content">House age</label>
                 </div>
-                <input type="number" id="value2" placeholder="Min" class="form-control">
-                <input type="number" id="value2" placeholder="Max" class="form-control">
+                <input type="number" id="value2a" placeholder="Min" class="form-control">
+                <input type="number" id="value2b" placeholder="Max" class="form-control">
             </div>
             <div class="form-filter">
                 <div class="margin-filter">
                     <label for="value3" class="form-content">Distance to the nearest MRT station</label>
                 </div>
-                <input type="number" id="value3" placeholder="Min" class="form-control">
-                <input type="number" id="value3" placeholder="Max" class="form-control">
+                <input type="number" id="value3a" placeholder="Min" class="form-control">
+                <input type="number" id="value3b" placeholder="Max" class="form-control">
             </div>
             <div class="form-filter">
                 <div class="margin-filter">
                     <label for="value4" class="form-content">Number of convenience stores</label>
                 </div>
-                <input type="number" id="value4" placeholder="Min" class="form-control">
-                <input type="number" id="value4" placeholder="Max" class="form-control">
+                <input type="number" id="value4a" placeholder="Min" class="form-control">
+                <input type="number" id="value4b" placeholder="Max" class="form-control">
             </div>
             <div class="form-filter">
                 <div class="margin-filter">
                     <label for="value5" class="form-content">Latitude</label>
                 </div>
-                <input type="number" id="value5" placeholder="Min" class="form-control">
-                <input type="number" id="value5" placeholder="Max" class="form-control">
+                <input type="number" id="value5a" placeholder="Min" class="form-control">
+                <input type="number" id="value5b" placeholder="Max" class="form-control">
             </div>
             <div class="form-filter">
                 <div class="margin-filter">
                     <label for="value6" class="form-content">Longitude</label>
                 </div>
-                <input type="number" id="value6" placeholder="Min" class="form-control">
-                <input type="number" id="value6" placeholder="Max" class="form-control">
+                <input type="number" id="value6a" placeholder="Min" class="form-control">
+                <input type="number" id="value6b" placeholder="Max" class="form-control">
             </div>
-            
-            <button type="button" onclick="submitData()" style="position:absolute; transform: translateX(37em) translateY(10em);">Send</button>
-            
+            <button type="button" onclick="submitData()" style="position:absolute; transform: translateX(37em) translateY(10em); ">Send</button>
         </form>
         <table id="result" class="table table-striped table-bordered" style="color: white; font-weight: bold; font-size: large;   background: url('../ms/7mSqO-sYvxV22xxZTdTp7vvj4SDkbIqQzphakadXiEI.webp') no-repeat center center fixed;
   background-size: cover; visibility: hidden;"></table>
@@ -137,35 +117,6 @@
     <footer>
         <p style="color: white;">&copy; 2024 Sech Team, Inc. All rights reserved.</p>
     </footer>
-    <script>
-        function submitData() {
-            document.getElementById('result').style.visibility = 'visible';
-            document.getElementById('result').textContent = 'Đang xử lý...';
-            fetch('https://backend-fhuz.onrender.com/showcsv', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(),
-            })
-            .then(response => response.json())
-            .then(data => {
- 
-                if (data.result !== undefined) {
-                   document.getElementById('result').innerHTML = data.result
-                }
-                else {
-                    document.getElementById('result').textContent = `Lỗi: ${data.error}`;
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('result').textContent = `Có lỗi xảy ra!`;
-            });
-            
-
-        }
-    </script>
 </body>
 </html>
 </li>
