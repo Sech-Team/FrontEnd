@@ -1,9 +1,7 @@
-function submitData() {
+function subfil() {
     document.getElementById('result').style.visibility = 'visible';
     document.getElementById('result').textContent = 'Đang xử lý...';
-    // document.getElementById('result').innerHTML = '<div class="spinner"></div>';
     for(let key = 1; key <= 6; key++) {
-        // console.log(key);
         let min = document.getElementById(`value${key}a`).value;
         let max = document.getElementById(`value${key}b`).value;
         if (min === '') {
