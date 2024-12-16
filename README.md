@@ -57,3 +57,8 @@ Dựa trên các tiêu chí được cung cấp, hệ thống:
 
 ## **Liên kết đến trang web**
 sechteam.me
+
+---
+
+## **Liên kết đến backend**
+https://github.com/Sech-Team/BackEnd
