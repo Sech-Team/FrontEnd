@@ -128,41 +128,33 @@
                 <input type="number" id="value6" placeholder="Max" class="form-control">
             </div>
             
-            <button type="button" onclick="" style="position:absolute; transform: translateX(37em) translateY(10em);">Send</button>
+            <button type="button" onclick="submitData()" style="position:absolute; transform: translateX(37em) translateY(10em);">Send</button>
+            
         </form>
+        <table id="result" class="table table-striped table-bordered" style="color: white; font-weight: bold; font-size: large;   background: url('../ms/7mSqO-sYvxV22xxZTdTp7vvj4SDkbIqQzphakadXiEI.webp') no-repeat center center fixed;
+  background-size: cover;"></table>
+
     </div>
     <footer>
         <p style="color: white;">&copy; 2024 Sech Team, Inc. All rights reserved.</p>
     </footer>
     <script>
         function submitData() {
-            document.getElementById('commentcontribute').style.visibility = 'visible';
-            const values = {
-                value1: document.getElementById('value1').value,
-                value2: document.getElementById('value2').value,
-                value3: document.getElementById('value3').value,
-                value4: document.getElementById('value4').value,
-                value5: document.getElementById('value5').value,
-                value6: document.getElementById('value6').value,
-            };
-            for (let key in values) {
-                if (values[key] === '') {
-                    values[key] = null;
-                }
-            }
             document.getElementById('result').textContent = 'Đang xử lý...';
-            fetch('https://backend-fhuz.onrender.com/process', {
+            fetch('http://127.0.0.1:5000/showcsv', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(values),
+                body: JSON.stringify(),
             })
             .then(response => response.json())
             .then(data => {
+ 
                 if (data.result !== undefined) {
-                    document.getElementById('result').textContent = `Kết quả: ${data.result}`;
-                } else {
+                   document.getElementById('result').innerHTML = data.result
+                }
+                else {
                     document.getElementById('result').textContent = `Lỗi: ${data.error}`;
                 }
             })
@@ -170,6 +162,8 @@
                 console.error('Error:', error);
                 document.getElementById('result').textContent = `Có lỗi xảy ra!`;
             });
+            
+
         }
     </script>
 </body>
