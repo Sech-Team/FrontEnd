@@ -1,11 +1,11 @@
 Sản phẩm của Sech Team
 
 Members:
-Phan Ngọc Thức
-Tống Phúc Thiện
-Nguyễn Danh Phương
-Bùi Phương Nam
-Phan Gia Phúc
+Phan Ngọc Thức\n
+Tống Phúc Thiện\n
+Nguyễn Danh Phương\n
+Bùi Phương Nam\n
+Phan Gia Phúc\n
 
 Dự Đoán Giá Nhà
 Trang web Dự Đoán Giá Nhà ra đời nhằm giúp đưa ra những quyết định mua bán hoặc đầu tư bất động sản một cách chính xác và hiệu quả. Với giao diện hiện đại, công cụ này mang đến cho người dùng hai tính năng chính: tìm kiếm thủ công và lọc thông minh, đáp ứng mọi nhu cầu tìm kiếm thông tin thị trường nhà đất.
