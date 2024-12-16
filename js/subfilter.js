@@ -1,23 +1,21 @@
 function subfil() {
     document.getElementById('result').style.visibility = 'visible';
     document.getElementById('result').textContent = 'Đang xử lý...';
+    var min = [], max = [];
     for(let key = 1; key <= 6; key++) {
-        let min = document.getElementById(`value${key}a`).value;
-        let max = document.getElementById(`value${key}b`).value;
-        if (min === '') {
-            min = Number.MIN_SAFE_INTEGER;
+        min[key] = document.getElementById(`value${key}a`).value;
+        max[key] = document.getElementById(`value${key}b`).value;
+        if (min[key] === '') {
+            min[key] = Number.MIN_SAFE_INTEGER;
         }
-        if (max === '') {
-            max = Number.MAX_SAFE_INTEGER;
+        if (max[key] === '') {
+            max[key] = Number.MAX_SAFE_INTEGER;
         }
-        if(parseInt(min) > parseInt(max)) {
-            let temp = min;
-            min = max;
-            max = temp;
-            return;
+        if(parseInt(min[key]) > parseInt(max[key])) {
+            let temp = min[key];
+            min[key] = max[key];
+            max[key] = temp;
         }
-        document.getElementById(`value${key}a`).value = min;
-        document.getElementById(`value${key}b`).value = max;
     }
     fetch('https://backend-fhuz.onrender.com/showcsv', {
         method: 'POST',
@@ -26,18 +24,18 @@ function subfil() {
         },
         body: JSON.stringify(
             {
-                "value1a": document.getElementById('value1a').value,
-                "value1b": document.getElementById('value1b').value,
-                "value2a": document.getElementById('value2a').value,
-                "value2b": document.getElementById('value2b').value,
-                "value3a": document.getElementById('value3a').value,
-                "value3b": document.getElementById('value3b').value,
-                "value4a": document.getElementById('value4a').value,
-                "value4b": document.getElementById('value4b').value,
-                "value5a": document.getElementById('value5a').value,
-                "value5b": document.getElementById('value5b').value,
-                "value6a": document.getElementById('value6a').value,
-                "value6b": document.getElementById('value6b').value,
+                "value1a": min[1],
+                "value1b": max[1],
+                "value2a": min[2],
+                "value2b": max[2],
+                "value3a": min[3],
+                "value3b": max[3],
+                "value4a": min[4],
+                "value4b": max[4],
+                "value5a": min[5],
+                "value5b": max[5],
+                "value6a": min[6],
+                "value6b": max[6],
             }
         ),
     })
