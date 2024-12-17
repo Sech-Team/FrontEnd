@@ -107,6 +107,13 @@
                     <div id="map"></div>
                     <p class="comment" id="commentcontribute">Giá dự đoán chênh lệch so với giá thực tế? Đóng góp tại <a href="donggopykien.html">đây</a></p>
                 </div>
+                <script>
+                    const value5 = document.getElementById('value5');
+                    const value6 = document.getElementById('value6');
+
+                    value5.addEventListener('input', checkAndCallFunction);
+                    value6.addEventListener('input', checkAndCallFunction);
+                </script>
             </div>
         </div>
     </div>
