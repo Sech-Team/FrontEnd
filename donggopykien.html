@@ -6,6 +6,7 @@
     <link rel = "shortcut icon" type = "x-icon" href = "img/guys-so-ive-been-doing-this-meowing-thing-recently-thats-v0-yzk7i5th81sc1.png">
     <title>Contribute comments</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/senddata.js"></script>
     <style>
         @media (max-width: 768px) {
             .placeholder {
@@ -18,7 +19,7 @@
 <body>
     <div class="snow"></div>
     <script src="js/snow.js"></script>
-    <form action="donggopykien.html">
+    <span>
         <textarea placeholder="Đóng góp ý kiến tại đây" id="comment" name="contributecomment" style="width: 60em; height: 40em;"></textarea>
         <label for="selection" class="box">Chọn nội dung đóng góp ý kiến</label>
         <select id="selection" class="box" name="selection">
@@ -28,7 +29,22 @@
             <option value="UX">Trải nghiệm người dùng</option>
             <option value="feature">Tính năng</option>
         </select>
-        <button>Submit</button>
-    </form>
+        <button type = "button" onclick="fs()">Submit</button>
+        <script>
+            function fs(){
+                var comment = document.getElementById("comment").value;
+                var selection = document.getElementById("selection").value;
+                if(comment == ""){
+                    comment = "Không có nội dung";
+                }
+                if(selection == ""){
+                    selection = "Không có nội dung";
+                }
+                senddata(comment, selection);
+                location.reload();
+                alert("Cảm ơn bạn đã đóng góp ý kiến");
+            }
+        </script>
+    <span>
 </body>
 </html>
