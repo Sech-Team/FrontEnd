@@ -2,7 +2,7 @@ function subfil() {
     document.getElementById('result').style.visibility = 'visible';
     document.getElementById('result').textContent = 'Đang xử lý...';
     var min = [], max = [];
-    for(let key = 1; key <= 6; key++) {
+    for(let key = 1; key <= 7; key++) {
         min[key] = document.getElementById(`value${key}a`).value;
         max[key] = document.getElementById(`value${key}b`).value;
         if (min[key] === '') {
@@ -36,6 +36,8 @@ function subfil() {
                 "value5b": max[5],
                 "value6a": min[6],
                 "value6b": max[6],
+                "value7a": min[7],
+                "value7b": max[7]
             }
         ),
     })
