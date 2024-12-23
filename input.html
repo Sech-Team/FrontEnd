@@ -30,6 +30,7 @@
     <script src = "js/ggmap.js"></script>
     <script src="js/music.js" defer></script>
     <script src="js/subin.js" defer></script>
+    <script src="js/senddonggop.js" defer></script>
 </head>
 <body>
     <audio id="theme-music" loop="loop" autoplay></audio>
@@ -105,7 +106,15 @@
                 <!-- Map Section -->
                 <div class="col-md-6">
                     <div id="map"></div>
-                    <p class="comment" id="commentcontribute">Giá dự đoán chênh lệch so với giá thực tế? Đóng góp tại <a href="donggopykien.html">đây</a></p>
+                    <p class="comment" id="commentcontribute">Giá dự đoán chênh lệch so với giá thực tế? Đóng góp tại đây
+                    <button type="button" onclick="donggop()">Đóng góp</button>
+                    <script>
+                        function donggop() {
+                            const number = prompt("Nhập giá thực tế: ");
+                            senddonggop(number);
+                        }
+                    </script>
+                    </p>
                 </div>
                 <script>
                     const value5 = document.getElementById('value5');
